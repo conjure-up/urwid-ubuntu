@@ -1,3 +1,4 @@
+# Copyrigh 2015 Canonical, Ltd.
 from urwid import ListBox, SimpleListWalker, WidgetWrap
 
 
