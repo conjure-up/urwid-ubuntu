@@ -1,47 +1,46 @@
 # Copyright 2015 Canonical, Ltd.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 """ Base Frame Widget """
 
 from urwid import Frame as _Frame
-from urwid import WidgetWrap, Pile, Text
-
-
-class Header(WidgetWrap):
-    """ Header Widget
-
-    This widget uses the style key `frame_header`
-
-    Arguments:
-    title: Title text
-    align: Text alignment, defaults=left
-    """
-    def __init__(self, title, align="left"):
-        self._title = Text(("frame_header", title), align=align)
-        self.pile = Pile([self.title_widget])
-        super().__init__(self.pile)
-
-    @property
-    def title(self):
-        return self._title.get_text()[0]
-
-    @title.setter
-    def title(self, val, attr=None):
-        """
-        Sets header title text
-
-        Arguments:
-        val: Text value
-        attr: (optional) Attribute lookup
-        """
-        if attr is not None:
-            self._title.set_text(val)
-        else:
-            self._title.set_text((attr, val))
+from urwid import WidgetWrap
+from .anchors import Header, Footer, Body
 
 
 class Frame(WidgetWrap):
-    def __init__(self, header, body, footer):
-        self.frame = _Frame(body,
-                            header,
-                            footer)
+    key_conversion_map = {'tab': 'down', 'shift tab': 'up'}
+
+    def __init__(self, header=None, body=None, footer=None):
+        self.header = header if header else Header("Welcome")
+        self.body = body if body else Body()
+        self.footer = footer if footer else Footer()
+        self.frame = _Frame(self.body,
+                            header=self.header,
+                            footer=self.footer)
         super().__init__(self.frame)
+
+    def keypress(self, size, key):
+        key = self.key_conversion_map.get(key, key)
+        return super().keypress(size, key)
+
+    def set_header(self, title=None, excerpt=None):
+        self.frame.header = Header(title, excerpt)
+
+    def set_footer(self, message, completion=0):
+        self.frame.footer = Footer(message, completion)
+
+    def set_body(self, widget):
+        self.frame.body = widget
