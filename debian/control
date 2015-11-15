@@ -8,12 +8,8 @@ Build-Depends: debhelper (>= 9),
                pyflakes,
                python3-all,
                python3-nose,
-               python3-requests,
                python3-setuptools,
-               python3-tornado,
-               python3-urwid,
-               python3-yaml,
-               python3-toml
+               python3-urwid
 Standards-Version: 3.9.6
 Homepage: https://github.com/Ubuntu-Solutions-Engineering/conjure
 X-Python3-Version: >= 3.3
@@ -22,14 +18,6 @@ Vcs-Git: https://github.com/Ubuntu-Solutions-Engineering/conjure.git
 
 Package: urwid-ubuntu
 Architecture: all
-Depends:
-         python3-requests,
-         python3-tornado,
-         python3-urwid,
-         python3-yaml,
-         python3-toml
-         ${misc:Depends},
-         ${python3:Depends},
-         ${python:Depends}
+Depends: python3-urwid, ${misc:Depends}, ${python3:Depends}, ${python:Depends}
 Description: Urwid Widgets for Ubuntu
  Provides styled widgets to use in Ubuntu Terminal UI projects.

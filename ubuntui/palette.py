@@ -15,26 +15,46 @@
 
 """ Palette Loader """
 
+# Palette
+orange        = "#f60"
+light_orange  = "#f80"
+dark_magenta  = "#608"
+light_magenta = "#f0f"
+light_red     = "#f00"
+light_green   = "#0d0"
+white         = "white"
+black         = "black"
+light_gray    = "g82"
+cool_gray     = "g50"
+warm_gray     = "g15"
+blue          = "#08f"
+dark_blue     = "#00f"
 
-def _get_hex(color, palette):
-    if not color:
-        return ""
-    return palette[color]
-
-
-def load_palette(palette_conf):
-    """ Load style from configuration, see ubuntui.conf
-
-    Arguments:
-    palette_conf: Toml configuration containing a `style` table
-    """
-    palette_map = []
-    for k, v in palette_conf['style'].items():
-        color1, color2, color3, color4, color5 = v
-        palette_map.append((k,
-                            _get_hex(color1),
-                            _get_hex(color2),
-                            _get_hex(color3),
-                            _get_hex(color4),
-                            _get_hex(color5)))
-    return palette_map
+# Styles
+STYLES = [
+    ("frame_header", "", "", "", white, orange),
+    ("frame_subheader", "", "", "", white, warm_gray),
+    ("frame_excerpt", "", "", "", cool_gray, ""),
+    ("frame_footer", "", "", "", white, warm_gray),
+    ("body", "", "", "", white, ""),
+    ("button_primary", "", "", "", white, cool_gray),
+    ("button_primary focus", "", "", "", white, light_orange),
+    ("button_secondary", "", "", "", white, cool_gray),
+    ("button_secondary focus", "", "", "", white, light_orange),
+    ("info_minor", "", "", "", warm_gray, ""),
+    ("info_major", "", "", "", light_green, ""),
+    ("error_major", "", "", "", light_red, ""),
+    ("status_info", "", "", "", light_green, warm_gray),
+    ("status_error", "", "", "", light_red, warm_gray),
+    ("string_input", "", "", "", white, cool_gray),
+    ("string_input focus", "", "", "", white, orange),
+    ("dialog", "", "", "", white, warm_gray),
+    ("radio_input", "", "", "", white, warm_gray),
+    ("radio_input focus", "", "", "", orange, warm_gray),
+    ("header_title", "", "", "", orange, ""),
+    ("pending_icon_on", "", "", "", blue, ""),
+    ("pending_icon", "", "", "", blue, ""),
+    ("error_icon", "", "", "", light_red, ""),
+    ("success_icon", "", "", "", light_green, ""),
+    ("column_header", "", "", "", white, blue)
+]

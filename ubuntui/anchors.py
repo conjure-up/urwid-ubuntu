@@ -15,6 +15,7 @@
 
 from urwid import WidgetWrap, Text, Pile
 from .utils import Padding
+from .lists import SimpleList
 
 
 class Header(WidgetWrap):

@@ -24,13 +24,10 @@ from setuptools import setup, find_packages
 
 setup(name='ubuntui',
       version="0.0.1",
-      description="Ubuntu styled widgets for urwid",
+      description="Urwid widgets used in Ubuntu console apps",
       long_description=__doc__,
       author="Canonical Solutions Engineering",
       author_email='ubuntu-dev@lists.ubuntu.com',
       url="https://github.com/Ubuntu-Solutions-Engineering/urwid-ubuntu",
       license="AGPLv3+",
-      packages=find_packages(exclude=['test']),
-      data_files=[
-          ('share/urwid-ubuntu', ['ubuntui.conf'])
-      ])
+      packages=find_packages(exclude=['test']))
