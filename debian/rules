@@ -2,19 +2,9 @@
 
 export PYBUILD_NAME=ubuntui
 export PYBUILD_DISABLE_python2=1
-export PYBUILD_INSTALL_DIR=usr/share/urwid-ubuntu/
-export PYBUILD_INSTALL_ARGS_python3=--install-lib=usr/share/urwid-ubuntu/ \
-	--install-data=usr/ \
-	--root=$(CURDIR)/debian/urwid-ubuntu/ \
-	--no-compile -O0
 
 %:
 	dh $@ --with python3 --buildsystem=pybuild
-
-override_dh_python3:
-	dh_python3 --ignore-shebangs
-override_dh_installinit:
-	dh_installinit --no-start
 
 override_dh_auto_test:
 	@echo "No tests."

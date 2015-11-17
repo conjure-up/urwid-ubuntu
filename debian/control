@@ -16,8 +16,9 @@ X-Python3-Version: >= 3.3
 Vcs-Browser: https://github.com/Ubuntu-Solutions-Engineering/conjure
 Vcs-Git: https://github.com/Ubuntu-Solutions-Engineering/conjure.git
 
-Package: urwid-ubuntu
-Architecture: all
-Depends: python3-urwid, ${misc:Depends}, ${python3:Depends}, ${python:Depends}
+Package: python3-urwid-ubuntu
+Architecture: any
+Depends: ${misc:Depends}, ${python3:Depends}, ${shlibs:Depends}
+Provides: ${python:Provides}
 Description: Urwid Widgets for Ubuntu
  Provides styled widgets to use in Ubuntu Terminal UI projects.
