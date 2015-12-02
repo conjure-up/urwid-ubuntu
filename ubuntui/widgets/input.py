@@ -15,8 +15,12 @@ class StringEditor(WidgetWrap):
     Initializes and Edit object and attachs its result
     to the `value` accessor.
     """
-    def __init__(self, caption, **kwargs):
+    def __init__(self, caption=None, default=None, **kwargs):
+        if caption is None:
+            caption = ""
         self._edit = Edit(caption=caption, **kwargs)
+        if default is not None:
+            self._edit.set_edit_text(default)
         self.error = None
         super().__init__(self._edit)
 
@@ -97,7 +101,9 @@ class MountEditor(StringEditor):
 class IntegerEditor(WidgetWrap):
     """ IntEdit input class
     """
-    def __init__(self, caption, default=0):
+    def __init__(self, caption=None, default=0):
+        if caption is None:
+            caption = ""
         self._edit = IntEdit(caption=caption, default=default)
         super().__init__(self._edit)
 
@@ -128,6 +134,17 @@ class Selector(WidgetWrap):
             if item.get_state():
                 return item.label
         return "Unknown option"
+
+    def set_default(self, item, state=False):
+        """ Sets the default state of an item
+
+        Arguments:
+        item: name of item to change state of
+        state: sets item to True or False
+        """
+        for i in self.group:
+            if i.label == item:
+                item.set_state(state)
 
 
 class YesNo(Selector):
