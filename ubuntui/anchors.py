@@ -35,7 +35,7 @@ class Header(WidgetWrap):
             widgets.append(Text(("frame_header", title)))
             widgets.append(Text(""))
         if excerpt is not None:
-            widgets.append(Text("body", excerpt))
+            widgets.append(Text(("body", excerpt)))
             widgets.append(Text(""))
         super().__init__(Pile(widgets))
 

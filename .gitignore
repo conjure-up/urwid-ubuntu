@@ -55,3 +55,7 @@ docs/_build/
 
 # PyBuilder
 target/
+
+.pybuild
+debian/files
+debian/python3-urwid-*
