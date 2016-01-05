@@ -16,7 +16,7 @@
 from urwid import Pile, Text, WidgetWrap
 
 from .lists import SimpleList
-from .utils import Padding
+from .utils import Padding, Color
 
 
 class Header(WidgetWrap):
@@ -30,12 +30,14 @@ class Header(WidgetWrap):
     align: Text alignment, defaults=left
     """
     def __init__(self, title=None, excerpt=None, align="left"):
-        widgets = [Text("")]
+        widgets = []
         if title is not None:
-            widgets.append(Text(("frame_header", title)))
+            widgets.append(Color.frame_header(Text(title)))
             widgets.append(Text(""))
         if excerpt is not None:
-            widgets.append(Text(("body", excerpt)))
+            widgets.append(
+                Padding.center_90(
+                    Text(("body", excerpt))))
             widgets.append(Text(""))
         super().__init__(Pile(widgets))
 
