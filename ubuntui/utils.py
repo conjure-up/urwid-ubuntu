@@ -15,9 +15,12 @@
 
 
 from __future__ import unicode_literals
-from urwid import Padding as _Padding
-from urwid import AttrMap, Text, Divider
+
 from functools import partialmethod
+
+from urwid import Padding as _Padding
+from urwid import AttrMap, Divider, Text
+
 from .palette import STYLES
 
 

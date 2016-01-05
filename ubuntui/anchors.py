@@ -13,9 +13,10 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from urwid import WidgetWrap, Text, Pile
-from .utils import Padding
+from urwid import Pile, Text, WidgetWrap
+
 from .lists import SimpleList
+from .utils import Padding
 
 
 class Header(WidgetWrap):
@@ -63,7 +64,7 @@ class Footer(WidgetWrap):
     """
 
     def __init__(self, message="", completion=0):
-        message_widget = Padding.center_79(Text("body", message))
+        message_widget = Padding.center_79(Text(("body", message)))
         status = [
             Padding.line_break(""),
             message_widget
