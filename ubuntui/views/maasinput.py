@@ -26,6 +26,6 @@ class MaasServerInput(Dialog):
     """ Maas Server input dialog
     """
     input_items = [
-        ('maas_server', 'MAAS Server IP: '),
-        ('maas_apikey', 'MAAS API Key: ')
+        ('maas-server', 'MAAS Server IP: '),
+        ('maas-oauth', 'MAAS API Key: ')
     ]

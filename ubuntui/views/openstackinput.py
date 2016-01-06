@@ -18,7 +18,21 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-from .infodialog import InfoDialogWidget  # noqa
-from .selectordialog import SelectorWithDescriptionWidget  # noqa
-from .maasinput import MaasServerInput  # noqa
-from .openstackinput import OpenStackInput  # noqa
+from ubuntui.dialog import Dialog
+
+
+class OpenStackInput(Dialog):
+
+    """ OpenStack input dialog
+    """
+    input_items = [
+        ('use-floating-ip', 'Use Floating IP (Yes/No): '),
+        ('use-default-secgroup', 'Use default secgroup (Yes/No): '),
+        ('network', 'Network (eg. ubuntu-net): ')
+        ('auth-url', 'Keystone authentication URL: ')
+        ('tenant-name', 'Tenant Name: '),
+        ('region', 'Region: '),
+        ('auth-mode', 'Auth Mode (eg. userpass): '),
+        ('username', 'Username: '),
+        ('password', 'Password: ')
+    ]
