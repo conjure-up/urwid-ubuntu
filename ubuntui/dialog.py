@@ -19,8 +19,8 @@
 # THE SOFTWARE.
 
 from __future__ import unicode_literals
-from .input import StringEditor
-from cloudinstall.ui.utils import Color, Padding
+from .widgets.input import StringEditor
+from .utils import Color, Padding
 from collections import OrderedDict
 from urwid import (Pile, WidgetWrap, Text,
                    Button, Filler, Columns, Divider,
