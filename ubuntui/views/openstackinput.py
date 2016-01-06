@@ -27,12 +27,12 @@ class OpenStackInput(Dialog):
     """
     input_items = [
         ('use-floating-ip', 'Use Floating IP (Yes/No): '),
-        ('use-default-secgroup', 'Use default secgroup (Yes/No): '),
+        ('use-default-secgroup', 'Use secgroup (Yes/No): '),
         ('network', 'Network (eg. ubuntu-net): '),
-        ('auth-url', 'Keystone authentication URL: '),
+        ('auth-url', 'Keystone URL: '),
         ('tenant-name', 'Tenant Name: '),
         ('region', 'Region: '),
-        ('auth-mode', 'Auth Mode (eg. userpass): '),
+        ('auth-mode', 'Auth Mode: '),
         ('username', 'Username: '),
         ('password', 'Password: ')
     ]

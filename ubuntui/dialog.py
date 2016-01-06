@@ -73,7 +73,7 @@ class Dialog(WidgetWrap):
                 self.input_selection[key] = StringEditor(caption="", mask=mask)
                 col = Columns(
                     [
-                        ("weight", 0.4, Text(caption, align="right")),
+                        ("weight", 0.5, Text(caption, align="right")),
                         Color.string_input(self.input_selection[key],
                                            focus_map="string_input focus")
                     ]
