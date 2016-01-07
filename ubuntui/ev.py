@@ -20,7 +20,7 @@
 
 import urwid
 import asyncio
-
+import uuid
 import logging
 
 log = logging.getLogger('eventloop')
@@ -37,6 +37,7 @@ class EventLoop:
     """ Abstracts out event loop
     """
     loop = None
+    alarms = {}
 
     @classmethod
     def build_loop(cls, ui, palette, **kwargs):
@@ -69,11 +70,24 @@ class EventLoop:
 
     @classmethod
     def set_alarm_in(cls, interval, cb):
-        return cls.loop.set_alarm_in(interval, cb)
+        return cls.add_alarm(cls.loop.set_alarm_in(interval, cb),
+                             str(uuid.uuid1()))
+
+    @classmethod
+    def add_alarm(cls, handle, name):
+        if name in cls.alarms:
+            cls.loop.remove_alarm(cls.alarms[name])
+        cls.alarms[name] = handle
 
     @classmethod
     def remove_alarm(cls, handle):
         return cls.loop.remove_alarm(handle)
+
+    @classmethod
+    def remove_alarms(cls):
+        for alarm in cls.alarms.values():
+            cls.loop.remove_alarm(alarm)
+        cls.alarms = {}
 
     @classmethod
     def run(cls):
