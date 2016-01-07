@@ -19,7 +19,7 @@
 # THE SOFTWARE.
 
 from __future__ import unicode_literals
-from .widgets.input import StringEditor
+from .widgets.input import (StringEditor, YesNo, Selector, PasswordEditor)
 from .utils import Color, Padding
 from collections import OrderedDict
 from urwid import (Pile, WidgetWrap, Text,
@@ -27,6 +27,24 @@ from urwid import (Pile, WidgetWrap, Text,
                    signals, emit_signal, connect_signal)
 
 """ re-usable dialog widget """
+
+
+def opts_to_ui(opts):
+    """ Converts option dictionary suitable for input
+    """
+    converted_opts = []
+    for k, v in opts.items():
+        caption = k.replace('-', ' ')
+        if isinstance(v, bool):
+            widget = YesNo()
+        elif isinstance(v, list):
+            widget = Selector(v)
+        elif 'password' in k:
+            widget = PasswordEditor()
+        else:
+            widget = StringEditor()
+        converted_opts.append((k, caption, widget))
+    return converted_opts
 
 
 class Dialog(WidgetWrap):
