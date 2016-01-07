@@ -49,6 +49,8 @@ class StringEditor(WidgetWrap):
 
     @property
     def value(self):
+        if self._edit.get_edit_text() == "":
+            return None
         return self._edit.get_edit_text()
 
     @value.setter  # NOQA
