@@ -20,5 +20,3 @@
 
 from .infodialog import InfoDialogWidget  # noqa
 from .selectordialog import SelectorWithDescriptionWidget  # noqa
-from .maasinput import MaasServerInput  # noqa
-from .openstackinput import OpenStackInput  # noqa

@@ -35,6 +35,7 @@ def opts_to_ui(opts):
     converted_opts = []
     for k, v in opts.items():
         caption = k.replace('-', ' ')
+        caption = "{} ".format(caption)
         if isinstance(v, bool):
             widget = YesNo()
         elif isinstance(v, list):
