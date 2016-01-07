@@ -137,11 +137,13 @@ class Selector(WidgetWrap):
         self.opts = opts
         self.group = []
         self._add_options()
-        super().__init__(Columns(self.group))
+        super().__init__(Columns(self._add_options()))
 
     def _add_options(self):
+        cols = []
         for item in self.opts:
-            RadioButton(self.group, item)
+            cols.append((8, RadioButton(self.group, item)))
+        return cols
 
     @property
     def value(self):
