@@ -19,6 +19,7 @@
 # THE SOFTWARE.
 
 from ubuntui.dialog import Dialog
+from ubuntui.widgets import StringEditor, PasswordEditor, YesNo
 
 
 class OpenStackInput(Dialog):
@@ -26,13 +27,13 @@ class OpenStackInput(Dialog):
     """ OpenStack input dialog
     """
     input_items = [
-        ('use-floating-ip', 'Use Floating IP (Yes/No): '),
-        ('use-default-secgroup', 'Use secgroup (Yes/No): '),
-        ('network', 'Network (eg. ubuntu-net): '),
-        ('auth-url', 'Keystone URL: '),
-        ('tenant-name', 'Tenant Name: '),
-        ('region', 'Region: '),
-        ('auth-mode', 'Auth Mode: '),
-        ('username', 'Username: '),
-        ('password', 'Password: ')
+        ('use-floating-ip', 'Use Floating IP: ', YesNo()),
+        ('use-default-secgroup', 'Use secgroup: ', YesNo()),
+        ('network', 'Network (eg. ubuntu-net): ', StringEditor()),
+        ('auth-url', 'Keystone URL: ', StringEditor()),
+        ('tenant-name', 'Tenant Name: ', StringEditor()),
+        ('region', 'Region: ', StringEditor()),
+        ('auth-mode', 'Auth Mode: ', StringEditor()),
+        ('username', 'Username: ', StringEditor()),
+        ('password', 'Password: ', PasswordEditor())
     ]

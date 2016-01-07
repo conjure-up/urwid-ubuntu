@@ -19,6 +19,7 @@
 # THE SOFTWARE.
 
 from ubuntui.dialog import Dialog
+from ubuntui.widgets import StringEditor
 
 
 class MaasServerInput(Dialog):
@@ -26,6 +27,6 @@ class MaasServerInput(Dialog):
     """ Maas Server input dialog
     """
     input_items = [
-        ('maas-server', 'MAAS Server IP: '),
-        ('maas-oauth', 'MAAS API Key: ')
+        ('maas-server', 'MAAS Server IP: ', StringEditor()),
+        ('maas-oauth', 'MAAS API Key: ', StringEditor())
     ]

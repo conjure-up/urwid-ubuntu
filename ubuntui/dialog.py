@@ -35,6 +35,7 @@ class Dialog(WidgetWrap):
     signals = ['done']
     # key_conversion_map = {'tab': 'down', 'shift tab': 'up'}
 
+    # List of Tuples in the form of ('key', 'caption', widget)
     input_items = []
 
     def __init__(self, title, cb):
@@ -64,13 +65,8 @@ class Dialog(WidgetWrap):
         ]
         if self.input_items:
             for item in self.input_items:
-                key = item[0]
-                caption = item[1]
-                try:
-                    mask = item[2]
-                except:
-                    mask = None
-                self.input_selection[key] = StringEditor(caption="", mask=mask)
+                key, caption, w = item
+                self.input_selection[key] = w
                 col = Columns(
                     [
                         ("weight", 0.5, Text(caption, align="right")),

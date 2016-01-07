@@ -16,7 +16,7 @@
 """ Re-usable input widgets
 """
 
-from urwid import (Edit, IntEdit, RadioButton, WidgetWrap)
+from urwid import (Edit, IntEdit, RadioButton, WidgetWrap, Columns)
 import logging
 import re
 
@@ -61,7 +61,7 @@ class StringEditor(WidgetWrap):
 class PasswordEditor(StringEditor):
     """ Password input prompt with masking
     """
-    def __init__(self, caption, mask="*"):
+    def __init__(self, caption=None, mask="*"):
         super().__init__(caption, mask=mask)
 
 
@@ -137,6 +137,7 @@ class Selector(WidgetWrap):
         self.opts = opts
         self.group = []
         self._add_options()
+        super().__init__(Columns(self.group))
 
     def _add_options(self):
         for item in self.opts:
@@ -146,9 +147,9 @@ class Selector(WidgetWrap):
     def value(self):
         for item in self.group:
             log.debug(item)
-            if item.get_state():
-                return item.label
-        return "Unknown option"
+            if item.get_state() and item.label == "Yes":
+                return True
+        return False
 
     def set_default(self, item, state=False):
         """ Sets the default state of an item
