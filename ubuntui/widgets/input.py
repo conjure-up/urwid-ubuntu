@@ -147,11 +147,20 @@ class Selector(WidgetWrap):
 
     @property
     def value(self):
+        """ Returns value of selection.
+
+        If the value is Yes/No will return True/False
+        Any other values return the label.
+        """
         for item in self.group:
             log.debug(item)
             if item.get_state() and item.label == "Yes":
                 return True
-        return False
+            if item.get_state() and item.label == "No":
+                return False
+            if item.get_state():
+                return item.label
+        return None
 
     def set_default(self, item, state=False):
         """ Sets the default state of an item
