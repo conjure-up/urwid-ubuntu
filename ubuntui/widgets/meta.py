@@ -22,4 +22,4 @@ from functools import partial
 
 
 # Show the user this view can be scrolled
-MetaScroll = partial(Text, "\u21C5 Scroll")
+MetaScroll = partial(Text, "(\u21C5 Scroll)")

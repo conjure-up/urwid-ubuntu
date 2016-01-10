@@ -39,6 +39,9 @@ class Frame(WidgetWrap):
     def set_header(self, title=None, excerpt=None):
         self.frame.header = Header(title, excerpt)
 
+    def set_subheader(self, text=""):
+        self.frame.header.subheader = text
+
     def set_footer(self, message, completion=0):
         self.frame.footer = Footer(message, completion)
 

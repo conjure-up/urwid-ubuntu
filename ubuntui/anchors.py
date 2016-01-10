@@ -29,15 +29,19 @@ class Header(WidgetWrap):
     excerpt: Additional header text
     align: Text alignment, defaults=left
     """
-    def __init__(self, title=None, excerpt=None, align="left"):
+    def __init__(self, title=None, excerpt=None, subheader="", align="left"):
+        self._title = title
+        self._excerpt = excerpt
+        self._subheader = Text(subheader, align='center')
         widgets = []
-        if title is not None:
-            widgets.append(Color.frame_header(Text(title)))
+        if self._title is not None:
+            widgets.append(Color.frame_header(Text(self._title)))
+        widgets.append(Color.frame_subheader(self._subheader))
+        if self._excerpt is not None:
             widgets.append(Text(""))
-        if excerpt is not None:
             widgets.append(
                 Padding.center_90(
-                    Text(("body", excerpt))))
+                    Text(("body", self._excerpt))))
             widgets.append(Text(""))
         super().__init__(Pile(widgets))
 
@@ -59,6 +63,14 @@ class Header(WidgetWrap):
         else:
             self._title.set_text((attr, val))
 
+    @property
+    def subheader(self):
+        return self._subheader.get_text()[0]
+
+    @subheader.setter
+    def subheader(self, val):
+        self._subheader.set_text(val)
+
 
 class Footer(WidgetWrap):
     """ Footer widget
@@ -66,12 +78,12 @@ class Footer(WidgetWrap):
     """
 
     def __init__(self, message="", completion=0):
-        message_widget = Padding.center_79(Text(("body", message)))
+        message_widget = (Text(message))
         status = [
             Padding.line_break(""),
             message_widget
         ]
-        super().__init__(Pile(status))
+        super().__init__(Color.frame_footer(Pile(status)))
 
 
 class Body(WidgetWrap):

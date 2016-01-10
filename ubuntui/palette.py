@@ -61,7 +61,7 @@ STYLES = [
     ('deploy_highlight_end', "", "", "", warm_gray, cool_gray),
     ('disabled_button', "", "", "", light_gray, warm_gray),
     ('disabled_button_focus', "", "", "", light_gray, warm_gray),
-    ('divider_line', "", "", "", light_gray, ""),
+    ('divider_line', "", "", "", warm_gray, ""),
     ('filter', "", "", "", black, light_gray),
     ('filter_focus', "", "", "", white, warm_gray),
     ('focus', "", "", "", white, warm_gray),
