@@ -53,6 +53,7 @@ class EventLoop:
         evl = asyncio.get_event_loop()
         cls.loop = urwid.MainLoop(ui, palette,
                                   event_loop=urwid.AsyncioEventLoop(loop=evl),
+                                  pop_ups=True,
                                   **extra_opts)
 
     @classmethod

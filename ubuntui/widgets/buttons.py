@@ -13,6 +13,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+from __future__ import unicode_literals
 from urwid import Button, Text
 from functools import partial
 
@@ -32,3 +33,6 @@ cancel_btn = partial(PlainButton, label="Cancel", on_press=None)
 done_btn = partial(PlainButton, label="Done", on_press=None)
 reset_btn = partial(PlainButton, label="Reset", on_press=None)
 menu_btn = partial(MenuSelectButton, on_press=None)
+select_btn = partial(MenuSelectButton,
+                     label="Select \u2193",
+                     on_press=None)
