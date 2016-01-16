@@ -31,7 +31,7 @@ class SelectorWithDescriptionWidget(WidgetWrap):
     Simple selector box
 
     :param str title: title of selections
-    :param list opts: items to select
+    :param list opts: items to select ('name', 'description')
     :param cb: callback
     :returns: item selected from dialog
     """
