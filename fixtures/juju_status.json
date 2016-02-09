@@ -1,0 +1,147 @@
+{
+  "Machines": {
+    "2": {
+      "DNSName": "10.0.3.77",
+      "Id": "2",
+      "Hardware": "arch=amd64 cpu-cores=0 mem=0M",
+      "Jobs": ["JobHostUnits", "JobManageNetworking"],
+      "HasVote": false,
+      "Agent": {
+        "Info": "",
+        "Version": "2.0-alpha2.1",
+        "Status": "started",
+        "Kind": "",
+        "Life": "",
+        "Since": "2016-02-08T15:13:06.356038691Z",
+        "Data": {},
+        "Err": null
+      },
+      "Containers": {},
+      "InstanceId": "juju-e712da7b-6808-49ec-8c90-113b26d1650d-machine-2",
+      "InstanceState": "Running",
+      "WantsVote": false,
+      "Series": "trusty"
+    },
+    "1": {
+      "DNSName": "10.0.3.218",
+      "Id": "1",
+      "Hardware": "arch=amd64 cpu-cores=0 mem=0M",
+      "Jobs": ["JobHostUnits"],
+      "HasVote": false,
+      "Agent": {
+        "Info": "",
+        "Version": "2.0-alpha2.1",
+        "Status": "started",
+        "Kind": "",
+        "Life": "",
+        "Since": "2016-02-05T04:20:30.018093941Z",
+        "Data": {},
+        "Err": null
+      },
+      "Containers": {},
+      "InstanceId": "juju-e712da7b-6808-49ec-8c90-113b26d1650d-machine-1",
+      "InstanceState": "Running",
+      "WantsVote": false,
+      "Series": "trusty"
+    },
+    "0": {
+      "DNSName": "10.0.3.53",
+      "Id": "0",
+      "Hardware": "arch=amd64 cpu-cores=0 mem=0M",
+      "Jobs": ["JobManageModel", "JobHostUnits"],
+      "HasVote": true,
+      "Agent": {
+        "Info": "",
+        "Version": "2.0-alpha2.1",
+        "Status": "started",
+        "Kind": "",
+        "Life": "",
+        "Since": "2016-02-05T04:09:13.460693862Z",
+        "Data": {},
+        "Err": null
+      },
+      "Containers": {},
+      "InstanceId": "juju-e712da7b-6808-49ec-8c90-113b26d1650d-machine-0",
+      "InstanceState": "Running",
+      "WantsVote": true,
+      "Series": "trusty"
+    }
+  },
+  "Services": {
+    "wordpress": {
+      "Life": "",
+      "Err": null,
+      "MeterStatuses": null,
+      "Status": {
+        "Info": "",
+        "Version": "",
+        "Status": "unknown",
+        "Kind": "",
+        "Life": "",
+        "Since": "2016-02-05T04:22:54.966461344Z",
+        "Data": {},
+        "Err": null
+      },
+      "Units": {
+        "wordpress/0": {
+          "Life": "",
+          "AgentVersion": "2.0-alpha2.1",
+          "PublicAddress": "10.0.3.218",
+          "UnitAgent": {
+            "Info": "",
+            "Version": "2.0-alpha2.1",
+            "Status": "idle",
+            "Kind": "",
+            "Life": "",
+            "Since": "2016-02-08T23:40:33.374038009Z",
+            "Data": {},
+            "Err": null
+          },
+          "AgentStateInfo": "",
+          "AgentState": "started",
+          "Charm": "",
+          "Workload": {
+            "Info": "",
+            "Version": "",
+            "Status": "unknown",
+            "Kind": "",
+            "Life": "",
+            "Since": "2016-02-05T04:22:54.966461344Z",
+            "Data": {},
+            "Err": null
+          },
+          "Err": null,
+          "Machine": "1",
+          "OpenedPorts": ["80/tcp"],
+          "Subordinates": null
+        }
+      },
+      "SubordinateTo": [],
+      "Networks": {
+        "Enabled": null,
+        "Disabled": null
+      },
+      "CanUpgradeTo": "",
+      "Charm": "cs:trusty/wordpress-4",
+      "Relations": {
+        "loadbalancer": ["wordpress"]
+      },
+      "Exposed": false
+    }
+  },
+  "ModelName": "lxd",
+  "AvailableVersion": "",
+  "Networks": {},
+  "Relations": [{
+    "Id": 0,
+    "Interface": "reversenginx",
+    "Scope": "global",
+    "Endpoints": [{
+      "Role": "peer",
+      "Name": "loadbalancer",
+      "Subordinate": false,
+      "ServiceName": "wordpress"
+    }],
+    "Key": "wordpress:loadbalancer"
+  }]
+}

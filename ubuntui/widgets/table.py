@@ -45,11 +45,11 @@ class Table:
     def __init__(self):
         self.rows = Pile([])
 
-    def append(self, item):
+    def addRow(self, item):
         """ Appends widget to Pile
         """
-        self.rows.append((item, self.rows.options()))
-        self.rows.append((
+        self.rows.contents.append((item, self.rows.options()))
+        self.rows.contents.append((
             Divider("\N{BOX DRAWINGS LIGHT HORIZONTAL}"),
             self.rows.options()))
 
