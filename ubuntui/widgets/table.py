@@ -28,10 +28,7 @@ class Table:
         with appropriate color
 
         Params:
-        headings: List of column headings. Takes the following formats:
-          (1) A list of tuples ('header a',)
-          (2) A list of 2 argument tuples ('header a', 5), the second argument
-              being a fixed width.
+        headings: List of column text headings
         """
         cols = []
         for h in headings:
