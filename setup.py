@@ -23,11 +23,12 @@ Ubuntu styled widgets for urwid.
 from setuptools import setup, find_packages
 
 setup(name='ubuntui',
-      version="0.0.3",
+      version="0.0.4",
       description="Urwid widgets used in Ubuntu console apps",
       long_description=__doc__,
       author="Canonical Solutions Engineering",
       author_email='ubuntu-dev@lists.ubuntu.com',
       url="https://github.com/Ubuntu-Solutions-Engineering/urwid-ubuntu",
       license="AGPLv3+",
-      packages=find_packages(exclude=['test']))
+      packages=find_packages(exclude=['test']),
+      install_requires=['urwid'])

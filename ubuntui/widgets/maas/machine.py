@@ -43,6 +43,5 @@ class MachineWidget(WidgetWrap):
                   'owner']
         for m in _attrs:
             if isinstance(m, list):
-                setattr(self, m, Text(", ".join(self.machine.get(m))))
-            else:
-                setattr(self, m, Text(str(self.machine.get(m))))
+                continue
+            setattr(self, m, Text(str(self.machine.get(m))))

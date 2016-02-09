@@ -1,4 +1,4 @@
-# Copyright 2014, 2015 Canonical, Ltd.
+# Copyright 2014-2016 Canonical, Ltd.
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as
@@ -16,34 +16,39 @@
 from __future__ import unicode_literals
 
 from urwid import (Columns, Pile, Divider)
-
-
-class Cols:
-
-    def __init__(self):
-        self.columns = []
-
-    def add(self, widget, width=None):
-        """ Add a widget to a columns list
-
-        Arguments:
-        widget: widget
-        width: width of column
-        """
-        if width is None:
-            self.columns.append(widget)
-        else:
-            self.columns.append(('fixed', width, widget))
-
-    def render(self):
-        """ Renders columns with proper spacing
-        """
-        return Columns(self.columns)
+from ubuntui.utils import Color
 
 
 class Table:
     def __init__(self):
         self.rows = Pile([])
+
+    def addHeadings(self, headings):
+        """ Takes list of headings and converts them to column header
+        with appropriate color
+
+        Params:
+        headings: List of column headings. Takes the following formats:
+          (1) A list of tuples ('header a',)
+          (2) A list of 2 argument tuples ('header a', 5), the second argument
+              being a fixed width.
+        """
+        cols = []
+        for h in headings:
+            h = Color.column_header(h)
+            cols.append(h)
+            cols.append(('fixed', 1,
+                         Color.column_header(
+                             Divider("\N{BOX DRAWINGS LIGHT VERTICAL}"))))
+        self.addRow(Columns(cols))
+
+    def addColumns(self, columns):
+        cols = []
+        for c in columns:
+            cols.append(c)
+            cols.append(('fixed', 1,
+                         Divider("\N{BOX DRAWINGS LIGHT VERTICAL}")))
+        self.addRow(Columns(cols))
 
     def addRow(self, item):
         """ Appends widget to Pile
