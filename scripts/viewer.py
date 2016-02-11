@@ -35,7 +35,7 @@ class MachineUI(Frame):
                 m.storage,
                 m.memory
             ])
-        super().__init__(table.render())
+        super().__init__(body=table.render())
 
 
 def unhandled_input(key):

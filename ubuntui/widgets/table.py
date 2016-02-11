@@ -1,12 +1,12 @@
 from __future__ import unicode_literals
 
-from urwid import (Columns, Pile, Divider)
+from urwid import (Columns, ListBox, Divider)
 from ubuntui.utils import Color
 
 
 class Table:
     def __init__(self):
-        self.rows = Pile([])
+        self._rows = []
         self._row_id = []
 
     def addHeadings(self, headings):
@@ -36,10 +36,9 @@ class Table:
     def addRow(self, item):
         """ Appends widget to Pile
         """
-        self.rows.contents.append((item, self.rows.options()))
-        self.rows.contents.append((
-            Divider("\N{BOX DRAWINGS LIGHT HORIZONTAL}"),
-            self.rows.options()))
+        self._rows.append(item)
+        self._rows.append(
+            Divider("\N{BOX DRAWINGS LIGHT HORIZONTAL}"))
 
     def render(self):
-        return self.rows
+        return ListBox(self._rows)
