@@ -22,15 +22,17 @@ class Table:
             cols.append(h)
         self.addRow(Columns(cols))
 
-    def addColumns(self, row_id, columns):
+    def addColumns(self, row_id, columns, force=False):
         """ Convert list of widgets to Columns and add to a table row
 
         Arguments:
         row_id: unique id of new row
         columns: list of columns
+        force: force additional row regardless of existing row_id
         """
-        if row_id not in self._row_id:
-            self._row_id.append(row_id)
+        if row_id not in self._row_id or force:
+            if row_id not in self._row_id:
+                self._row_id.append(row_id)
             self.addRow(Columns(columns))
 
     def addRow(self, item):
