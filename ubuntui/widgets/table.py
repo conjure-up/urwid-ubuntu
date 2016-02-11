@@ -7,6 +7,7 @@ from ubuntui.utils import Color
 class Table:
     def __init__(self):
         self.rows = Pile([])
+        self._row_id = []
 
     def addHeadings(self, headings):
         """ Takes list of headings and converts them to column header
@@ -21,11 +22,16 @@ class Table:
             cols.append(h)
         self.addRow(Columns(cols))
 
-    def addColumns(self, columns):
-        cols = []
-        for c in columns:
-            cols.append(c)
-        self.addRow(Columns(cols))
+    def addColumns(self, row_id, columns):
+        """ Convert list of widgets to Columns and add to a table row
+
+        Arguments:
+        row_id: unique id of new row
+        columns: list of columns
+        """
+        if row_id not in self._row_id:
+            self._row_id.append(row_id)
+            self.addRow(Columns(columns))
 
     def addRow(self, item):
         """ Appends widget to Pile
