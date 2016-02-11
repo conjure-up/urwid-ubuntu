@@ -29,7 +29,7 @@ class MachineUI(Frame):
         ])
         for m in machine_view:
             m = MachineWidget(m)
-            table.addColumns([
+            table.addColumns(m.hostname, [
                 m.hostname,
                 m.cpu_count,
                 m.storage,
