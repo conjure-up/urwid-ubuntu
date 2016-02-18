@@ -1,15 +1,15 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: urwid-ubuntu
-Source: https://github.com/Ubuntu-Solutions-Engineering/conjure
+Source: https://github.com/Ubuntu-Solutions-Engineering/urwid-ubuntu
 
 Files: *
-Copyright: 2015 Canonical Ltd.
-           2015 Adam Stokes <adam.stokes@ubuntu.com>
+Copyright: 2015,2016 Canonical Ltd.
+           2015,2016 Adam Stokes <adam.stokes@ubuntu.com>
 License: LGPL-3
 
 Files: debian/*
-Copyright: 2015 Canonical Ltd.
-           2015 Adam Stokes <adam.stokes@ubuntu.com>
+Copyright: 2015,2016 Canonical Ltd.
+           2015,2016 Adam Stokes <adam.stokes@ubuntu.com>
 License: LGPL-3
 
 License: LGPL-3

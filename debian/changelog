@@ -1,5 +1,6 @@
-urwid-ubuntu (0.1.1) wily; urgency=medium
+urwid-ubuntu (0.1.1) xenial; urgency=medium
 
-  * UI Widgets
+  * Initial set of widgets
+  * Ubuntu theme
 
- -- Adam Stokes <adam.stokes@ubuntu.com>  Sat, 14 Nov 2015 16:32:58 -0500
+ -- Adam Stokes <adam.stokes@ubuntu.com>  Thu, 18 Feb 2016 11:49:19 -0500
