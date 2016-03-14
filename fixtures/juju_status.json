@@ -1,147 +1,428 @@
 {
-  "Machines": {
-    "2": {
-      "DNSName": "10.0.3.77",
-      "Id": "2",
-      "Hardware": "arch=amd64 cpu-cores=0 mem=0M",
-      "Jobs": ["JobHostUnits", "JobManageNetworking"],
-      "HasVote": false,
-      "Agent": {
-        "Info": "",
-        "Version": "2.0-alpha2.1",
-        "Status": "started",
-        "Kind": "",
-        "Life": "",
-        "Since": "2016-02-08T15:13:06.356038691Z",
-        "Data": {},
-        "Err": null
-      },
-      "Containers": {},
-      "InstanceId": "juju-e712da7b-6808-49ec-8c90-113b26d1650d-machine-2",
-      "InstanceState": "Running",
-      "WantsVote": false,
-      "Series": "trusty"
-    },
-    "1": {
-      "DNSName": "10.0.3.218",
-      "Id": "1",
-      "Hardware": "arch=amd64 cpu-cores=0 mem=0M",
-      "Jobs": ["JobHostUnits"],
-      "HasVote": false,
-      "Agent": {
-        "Info": "",
-        "Version": "2.0-alpha2.1",
-        "Status": "started",
-        "Kind": "",
-        "Life": "",
-        "Since": "2016-02-05T04:20:30.018093941Z",
-        "Data": {},
-        "Err": null
-      },
-      "Containers": {},
-      "InstanceId": "juju-e712da7b-6808-49ec-8c90-113b26d1650d-machine-1",
-      "InstanceState": "Running",
-      "WantsVote": false,
-      "Series": "trusty"
-    },
-    "0": {
-      "DNSName": "10.0.3.53",
-      "Id": "0",
-      "Hardware": "arch=amd64 cpu-cores=0 mem=0M",
-      "Jobs": ["JobManageModel", "JobHostUnits"],
-      "HasVote": true,
-      "Agent": {
-        "Info": "",
-        "Version": "2.0-alpha2.1",
-        "Status": "started",
-        "Kind": "",
-        "Life": "",
-        "Since": "2016-02-05T04:09:13.460693862Z",
-        "Data": {},
-        "Err": null
-      },
-      "Containers": {},
-      "InstanceId": "juju-e712da7b-6808-49ec-8c90-113b26d1650d-machine-0",
-      "InstanceState": "Running",
-      "WantsVote": true,
-      "Series": "trusty"
-    }
-  },
-  "Services": {
-    "wordpress": {
-      "Life": "",
-      "Err": null,
-      "MeterStatuses": null,
-      "Status": {
-        "Info": "",
-        "Version": "",
-        "Status": "unknown",
-        "Kind": "",
-        "Life": "",
-        "Since": "2016-02-05T04:22:54.966461344Z",
-        "Data": {},
-        "Err": null
-      },
-      "Units": {
-        "wordpress/0": {
-          "Life": "",
-          "AgentVersion": "2.0-alpha2.1",
-          "PublicAddress": "10.0.3.218",
-          "UnitAgent": {
-            "Info": "",
-            "Version": "2.0-alpha2.1",
-            "Status": "idle",
-            "Kind": "",
-            "Life": "",
-            "Since": "2016-02-08T23:40:33.374038009Z",
-            "Data": {},
-            "Err": null
-          },
-          "AgentStateInfo": "",
-          "AgentState": "started",
-          "Charm": "",
-          "Workload": {
-            "Info": "",
-            "Version": "",
-            "Status": "unknown",
-            "Kind": "",
-            "Life": "",
-            "Since": "2016-02-05T04:22:54.966461344Z",
-            "Data": {},
-            "Err": null
-          },
-          "Err": null,
-          "Machine": "1",
-          "OpenedPorts": ["80/tcp"],
-          "Subordinates": null
+    "ModelName": "staging",
+    "Machines": {
+        "1": {
+            "Series": "trusty",
+            "WantsVote": false,
+            "Agent": {
+                "Kind": "",
+                "Data": {
+                },
+                "Version": "2.0-beta2.1",
+                "Info": "",
+                "Life": "",
+                "Status": "started",
+                "Since": "2016-03-14T14:39:25.511210264Z",
+                "Err": null
+            },
+            "Id": "1",
+            "Jobs": [
+                "JobHostUnits"
+            ],
+            "Hardware": "arch=amd64 cpu-cores=0 mem=0M",
+            "InstanceState": "Running",
+            "Containers": {
+            },
+            "DNSName": "10.0.3.171",
+            "HasVote": false,
+            "InstanceId": "juju-fbc6f187-242d-419c-8303-8c74186e1a36-machine-1"
+        },
+        "3": {
+            "Series": "trusty",
+            "WantsVote": false,
+            "Agent": {
+                "Kind": "",
+                "Data": {
+                },
+                "Version": "2.0-beta2.1",
+                "Info": "",
+                "Life": "",
+                "Status": "started",
+                "Since": "2016-03-14T21:33:23.700634862Z",
+                "Err": null
+            },
+            "Id": "3",
+            "Jobs": [
+                "JobHostUnits"
+            ],
+            "Hardware": "arch=amd64 cpu-cores=0 mem=0M",
+            "InstanceState": "Running",
+            "Containers": {
+            },
+            "DNSName": "10.0.3.72",
+            "HasVote": false,
+            "InstanceId": "juju-fbc6f187-242d-419c-8303-8c74186e1a36-machine-3"
+        },
+        "0": {
+            "Series": "trusty",
+            "WantsVote": false,
+            "Agent": {
+                "Kind": "",
+                "Data": {
+                },
+                "Version": "2.0-beta2.1",
+                "Info": "",
+                "Life": "",
+                "Status": "started",
+                "Since": "2016-03-14T14:39:42.42989305Z",
+                "Err": null
+            },
+            "Id": "0",
+            "Jobs": [
+                "JobHostUnits"
+            ],
+            "Hardware": "arch=amd64 cpu-cores=0 mem=0M",
+            "InstanceState": "Running",
+            "Containers": {
+            },
+            "DNSName": "10.0.3.240",
+            "HasVote": false,
+            "InstanceId": "juju-fbc6f187-242d-419c-8303-8c74186e1a36-machine-0"
+        },
+        "2": {
+            "Series": "trusty",
+            "WantsVote": false,
+            "Agent": {
+                "Kind": "",
+                "Data": {
+                },
+                "Version": "2.0-beta2.1",
+                "Info": "",
+                "Life": "",
+                "Status": "started",
+                "Since": "2016-03-14T14:39:53.594974104Z",
+                "Err": null
+            },
+            "Id": "2",
+            "Jobs": [
+                "JobHostUnits"
+            ],
+            "Hardware": "arch=amd64 cpu-cores=0 mem=0M",
+            "InstanceState": "Running",
+            "Containers": {
+            },
+            "DNSName": "10.0.3.175",
+            "HasVote": false,
+            "InstanceId": "juju-fbc6f187-242d-419c-8303-8c74186e1a36-machine-2"
         }
-      },
-      "SubordinateTo": [],
-      "Networks": {
-        "Enabled": null,
-        "Disabled": null
-      },
-      "CanUpgradeTo": "",
-      "Charm": "cs:trusty/wordpress-4",
-      "Relations": {
-        "loadbalancer": ["wordpress"]
-      },
-      "Exposed": false
-    }
-  },
-  "ModelName": "lxd",
-  "AvailableVersion": "",
-  "Networks": {},
-  "Relations": [{
-    "Id": 0,
-    "Interface": "reversenginx",
-    "Scope": "global",
-    "Endpoints": [{
-      "Role": "peer",
-      "Name": "loadbalancer",
-      "Subordinate": false,
-      "ServiceName": "wordpress"
-    }],
-    "Key": "wordpress:loadbalancer"
-  }]
+    },
+    "Services": {
+        "haproxy": {
+            "Exposed": false,
+            "Status": {
+                "Kind": "",
+                "Data": {
+                },
+                "Version": "",
+                "Info": "",
+                "Life": "",
+                "Status": "unknown",
+                "Since": "2016-03-14T14:40:01.617951802Z",
+                "Err": null
+            },
+            "Charm": "cs:trusty\/haproxy-14",
+            "Units": {
+                "haproxy/0": {
+                    "AgentState": "started",
+                    "PublicAddress": "10.0.3.171",
+                    "Workload": {
+                        "Kind": "",
+                        "Data": {
+                        },
+                        "Version": "",
+                        "Info": "",
+                        "Life": "",
+                        "Status": "unknown",
+                        "Since": "2016-03-14T14:40:01.617951802Z",
+                        "Err": null
+                    },
+                    "Subordinates": null,
+                    "UnitAgent": {
+                        "Kind": "",
+                        "Data": {
+                        },
+                        "Version": "2.0-beta2.1",
+                        "Info": "",
+                        "Life": "",
+                        "Status": "idle",
+                        "Since": "2016-03-14T23:26:37.102542377Z",
+                        "Err": null
+                    },
+                    "OpenedPorts": [
+                        "80\/tcp"
+                    ],
+                    "Charm": "",
+                    "AgentStateInfo": "",
+                    "AgentVersion": "2.0-beta2.1",
+                    "Machine": "1",
+                    "Life": "",
+                    "Err": null
+                }
+            },
+            "CanUpgradeTo": "cs:trusty\/haproxy-18",
+            "MeterStatuses": null,
+            "Life": "",
+            "SubordinateTo": [],
+            "Networks": {
+                "Disabled": null,
+                "Enabled": null
+            },
+            "Err": null,
+            "Relations": {
+                "reverseproxy": [
+                    "ghost"
+                ],
+                "peer": [
+                    "haproxy"
+                ]
+            }
+        },
+        "mysql": {
+            "Exposed": false,
+            "Status": {
+                "Kind": "",
+                "Data": {
+                    "hook": "db-relation-joined",
+                    "relation-id": 2,
+                    "remote-unit": "ghost\/0"
+                },
+                "Version": "",
+                "Info": "hook failed: \"db-relation-joined\"",
+                "Life": "",
+                "Status": "error",
+                "Since": "2016-03-14T23:25:51.567099935Z",
+                "Err": null
+            },
+            "Charm": "cs:trusty\/mysql-30",
+            "Units": {
+                "mysql/1": {
+                    "AgentState": "error",
+                    "PublicAddress": "10.0.3.72",
+                    "Workload": {
+                        "Kind": "",
+                        "Data": {
+                            "relation-id": 2
+                        },
+                        "Version": "",
+                        "Info": "hook failed: \"db-relation-joined\"",
+                        "Life": "",
+                        "Status": "error",
+                        "Since": "2016-03-14T23:25:51.567099935Z",
+                        "Err": null
+                    },
+                    "Subordinates": null,
+                    "UnitAgent": {
+                        "Kind": "",
+                        "Data": {
+                        },
+                        "Version": "2.0-beta2.1",
+                        "Info": "",
+                        "Life": "",
+                        "Status": "idle",
+                        "Since": "2016-03-14T23:25:51.567099935Z",
+                        "Err": null
+                    },
+                    "OpenedPorts": null,
+                    "Charm": "",
+                    "AgentStateInfo": "hook failed: \"db-relation-joined\"",
+                    "AgentVersion": "2.0-beta2.1",
+                    "Machine": "3",
+                    "Life": "",
+                    "Err": null
+                },
+                "mysql/0": {
+                    "AgentState": "started",
+                    "PublicAddress": "10.0.3.175",
+                    "Workload": {
+                        "Kind": "",
+                        "Data": {
+                        },
+                        "Version": "",
+                        "Info": "",
+                        "Life": "",
+                        "Status": "unknown",
+                        "Since": "2016-03-14T14:41:36.157027118Z",
+                        "Err": null
+                    },
+                    "Subordinates": null,
+                    "UnitAgent": {
+                        "Kind": "",
+                        "Data": {
+                        },
+                        "Version": "2.0-beta2.1",
+                        "Info": "",
+                        "Life": "",
+                        "Status": "idle",
+                        "Since": "2016-03-14T23:25:12.03312202Z",
+                        "Err": null
+                    },
+                    "OpenedPorts": null,
+                    "Charm": "",
+                    "AgentStateInfo": "",
+                    "AgentVersion": "2.0-beta2.1",
+                    "Machine": "2",
+                    "Life": "",
+                    "Err": null
+                }
+            },
+            "CanUpgradeTo": "cs:trusty\/mysql-36",
+            "MeterStatuses": null,
+            "Life": "",
+            "SubordinateTo": [],
+            "Networks": {
+                "Disabled": null,
+                "Enabled": null
+            },
+            "Err": null,
+            "Relations": {
+                "cluster": [
+                    "mysql"
+                ],
+                "db": [
+                    "ghost"
+                ]
+            }
+        },
+        "ghost": {
+            "Exposed": false,
+            "Status": {
+                "Kind": "",
+                "Data": {
+                },
+                "Version": "",
+                "Info": "Ready",
+                "Life": "",
+                "Status": "active",
+                "Since": "2016-03-14T21:35:18.5035317Z",
+                "Err": null
+            },
+            "Charm": "cs:~adam-stokes\/trusty\/ghost-6",
+            "Units": {
+                "ghost/0": {
+                    "AgentState": "started",
+                    "PublicAddress": "10.0.3.240",
+                    "Workload": {
+                        "Kind": "",
+                        "Data": {
+                        },
+                        "Version": "",
+                        "Info": "Ready",
+                        "Life": "",
+                        "Status": "active",
+                        "Since": "2016-03-14T21:35:18.5035317Z",
+                        "Err": null
+                    },
+                    "Subordinates": null,
+                    "UnitAgent": {
+                        "Kind": "",
+                        "Data": {
+                        },
+                        "Version": "2.0-beta2.1",
+                        "Info": "",
+                        "Life": "",
+                        "Status": "idle",
+                        "Since": "2016-03-14T23:25:12.032445359Z",
+                        "Err": null
+                    },
+                    "OpenedPorts": null,
+                    "Charm": "",
+                    "AgentStateInfo": "",
+                    "AgentVersion": "2.0-beta2.1",
+                    "Machine": "0",
+                    "Life": "",
+                    "Err": null
+                }
+            },
+            "CanUpgradeTo": "cs:~adam-stokes\/trusty\/ghost-9",
+            "MeterStatuses": null,
+            "Life": "",
+            "SubordinateTo": [],
+            "Networks": {
+                "Disabled": null,
+                "Enabled": null
+            },
+            "Err": null,
+            "Relations": {
+                "website": [
+                    "haproxy"
+                ],
+                "database": [
+                    "mysql"
+                ]
+            }
+        }
+    },
+    "AvailableVersion": "",
+    "Networks": {
+    },
+    "Relations": [
+        {
+            "Scope": "global",
+            "Endpoints": [
+                {
+                    "Name": "peer",
+                    "ServiceName": "haproxy",
+                    "Subordinate": false,
+                    "Role": "peer"
+                }
+            ],
+            "Interface": "haproxy-peer",
+            "Key": "haproxy:peer",
+            "Id": 0
+        },
+        {
+            "Scope": "global",
+            "Endpoints": [
+                {
+                    "Name": "website",
+                    "ServiceName": "ghost",
+                    "Subordinate": false,
+                    "Role": "provider"
+                },
+                {
+                    "Name": "reverseproxy",
+                    "ServiceName": "haproxy",
+                    "Subordinate": false,
+                    "Role": "requirer"
+                }
+            ],
+            "Interface": "http",
+            "Key": "haproxy:reverseproxy ghost:website",
+            "Id": 3
+        },
+        {
+            "Scope": "global",
+            "Endpoints": [
+                {
+                    "Name": "cluster",
+                    "ServiceName": "mysql",
+                    "Subordinate": false,
+                    "Role": "peer"
+                }
+            ],
+            "Interface": "mysql-ha",
+            "Key": "mysql:cluster",
+            "Id": 1
+        },
+        {
+            "Scope": "global",
+            "Endpoints": [
+                {
+                    "Name": "db",
+                    "ServiceName": "mysql",
+                    "Subordinate": false,
+                    "Role": "provider"
+                },
+                {
+                    "Name": "database",
+                    "ServiceName": "ghost",
+                    "Subordinate": false,
+                    "Role": "requirer"
+                }
+            ],
+            "Interface": "mysql",
+            "Key": "ghost:database mysql:db",
+            "Id": 2
+        }
+    ]
 }
