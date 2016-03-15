@@ -12,7 +12,8 @@ class UnitWidget:
         machine: Juju Unit Class
         """
         self._unit = unit
-        self.Name = Text(name)
+        self._name = name
+        self.Name = Text(self._name)
         self.AgentState = Text(unit['AgentState'])
         self.PublicAddress = Text(unit['PublicAddress'])
         self.Machine = Text(unit['Machine'])

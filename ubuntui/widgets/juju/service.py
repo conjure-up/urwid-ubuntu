@@ -3,7 +3,6 @@
 
 from urwid import Text
 from ubuntui.widgets.juju.unit import UnitWidget
-import q
 
 
 class ServiceWidget:
@@ -17,6 +16,5 @@ class ServiceWidget:
         self.Icon = Text("")
         self.Units = []
         for n, unit in service['Units'].items():
-            q(n)
             w = UnitWidget(n, unit)
             self.Units.append(w)
