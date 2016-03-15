@@ -18,3 +18,4 @@ class UnitWidget:
         self.AgentStateInfo = Text(unit['AgentStateInfo'])
         self.WorkloadInfo = Text(unit['Workload']['Info'])
         self.WorkloadStatus = Text(unit['Workload']['Status'])
+        self.Icon = Text("")
