@@ -1,428 +1,815 @@
 {
-    "ModelName": "staging",
-    "Machines": {
-        "1": {
-            "Series": "trusty",
-            "WantsVote": false,
-            "Agent": {
-                "Kind": "",
-                "Data": {
-                },
-                "Version": "2.0-beta2.1",
-                "Info": "",
-                "Life": "",
-                "Status": "started",
-                "Since": "2016-03-14T14:39:25.511210264Z",
-                "Err": null
-            },
-            "Id": "1",
-            "Jobs": [
-                "JobHostUnits"
-            ],
-            "Hardware": "arch=amd64 cpu-cores=0 mem=0M",
-            "InstanceState": "Running",
-            "Containers": {
-            },
-            "DNSName": "10.0.3.171",
-            "HasVote": false,
-            "InstanceId": "juju-fbc6f187-242d-419c-8303-8c74186e1a36-machine-1"
-        },
-        "3": {
-            "Series": "trusty",
-            "WantsVote": false,
-            "Agent": {
-                "Kind": "",
-                "Data": {
-                },
-                "Version": "2.0-beta2.1",
-                "Info": "",
-                "Life": "",
-                "Status": "started",
-                "Since": "2016-03-14T21:33:23.700634862Z",
-                "Err": null
-            },
-            "Id": "3",
-            "Jobs": [
-                "JobHostUnits"
-            ],
-            "Hardware": "arch=amd64 cpu-cores=0 mem=0M",
-            "InstanceState": "Running",
-            "Containers": {
-            },
-            "DNSName": "10.0.3.72",
-            "HasVote": false,
-            "InstanceId": "juju-fbc6f187-242d-419c-8303-8c74186e1a36-machine-3"
-        },
-        "0": {
-            "Series": "trusty",
-            "WantsVote": false,
-            "Agent": {
-                "Kind": "",
-                "Data": {
-                },
-                "Version": "2.0-beta2.1",
-                "Info": "",
-                "Life": "",
-                "Status": "started",
-                "Since": "2016-03-14T14:39:42.42989305Z",
-                "Err": null
-            },
-            "Id": "0",
-            "Jobs": [
-                "JobHostUnits"
-            ],
-            "Hardware": "arch=amd64 cpu-cores=0 mem=0M",
-            "InstanceState": "Running",
-            "Containers": {
-            },
-            "DNSName": "10.0.3.240",
-            "HasVote": false,
-            "InstanceId": "juju-fbc6f187-242d-419c-8303-8c74186e1a36-machine-0"
-        },
-        "2": {
-            "Series": "trusty",
-            "WantsVote": false,
-            "Agent": {
-                "Kind": "",
-                "Data": {
-                },
-                "Version": "2.0-beta2.1",
-                "Info": "",
-                "Life": "",
-                "Status": "started",
-                "Since": "2016-03-14T14:39:53.594974104Z",
-                "Err": null
-            },
-            "Id": "2",
-            "Jobs": [
-                "JobHostUnits"
-            ],
-            "Hardware": "arch=amd64 cpu-cores=0 mem=0M",
-            "InstanceState": "Running",
-            "Containers": {
-            },
-            "DNSName": "10.0.3.175",
-            "HasVote": false,
-            "InstanceId": "juju-fbc6f187-242d-419c-8303-8c74186e1a36-machine-2"
-        }
-    },
-    "Services": {
-        "haproxy": {
-            "Exposed": false,
-            "Status": {
-                "Kind": "",
-                "Data": {
-                },
-                "Version": "",
-                "Info": "",
-                "Life": "",
-                "Status": "unknown",
-                "Since": "2016-03-14T14:40:01.617951802Z",
-                "Err": null
-            },
-            "Charm": "cs:trusty\/haproxy-14",
-            "Units": {
-                "haproxy/0": {
-                    "AgentState": "started",
-                    "PublicAddress": "10.0.3.171",
-                    "Workload": {
-                        "Kind": "",
-                        "Data": {
-                        },
-                        "Version": "",
-                        "Info": "",
-                        "Life": "",
-                        "Status": "unknown",
-                        "Since": "2016-03-14T14:40:01.617951802Z",
-                        "Err": null
-                    },
-                    "Subordinates": null,
-                    "UnitAgent": {
-                        "Kind": "",
-                        "Data": {
-                        },
-                        "Version": "2.0-beta2.1",
-                        "Info": "",
-                        "Life": "",
-                        "Status": "idle",
-                        "Since": "2016-03-14T23:26:37.102542377Z",
-                        "Err": null
-                    },
-                    "OpenedPorts": [
-                        "80\/tcp"
-                    ],
-                    "Charm": "",
-                    "AgentStateInfo": "",
-                    "AgentVersion": "2.0-beta2.1",
-                    "Machine": "1",
-                    "Life": "",
-                    "Err": null
-                }
-            },
-            "CanUpgradeTo": "cs:trusty\/haproxy-18",
-            "MeterStatuses": null,
-            "Life": "",
-            "SubordinateTo": [],
-            "Networks": {
-                "Disabled": null,
-                "Enabled": null
-            },
-            "Err": null,
-            "Relations": {
-                "reverseproxy": [
-                    "ghost"
-                ],
-                "peer": [
-                    "haproxy"
-                ]
-            }
-        },
-        "mysql": {
-            "Exposed": false,
-            "Status": {
-                "Kind": "",
-                "Data": {
-                    "hook": "db-relation-joined",
-                    "relation-id": 2,
-                    "remote-unit": "ghost\/0"
-                },
-                "Version": "",
-                "Info": "hook failed: \"db-relation-joined\"",
-                "Life": "",
-                "Status": "error",
-                "Since": "2016-03-14T23:25:51.567099935Z",
-                "Err": null
-            },
-            "Charm": "cs:trusty\/mysql-30",
-            "Units": {
-                "mysql/1": {
-                    "AgentState": "error",
-                    "PublicAddress": "10.0.3.72",
-                    "Workload": {
-                        "Kind": "",
-                        "Data": {
-                            "relation-id": 2
-                        },
-                        "Version": "",
-                        "Info": "hook failed: \"db-relation-joined\"",
-                        "Life": "",
-                        "Status": "error",
-                        "Since": "2016-03-14T23:25:51.567099935Z",
-                        "Err": null
-                    },
-                    "Subordinates": null,
-                    "UnitAgent": {
-                        "Kind": "",
-                        "Data": {
-                        },
-                        "Version": "2.0-beta2.1",
-                        "Info": "",
-                        "Life": "",
-                        "Status": "idle",
-                        "Since": "2016-03-14T23:25:51.567099935Z",
-                        "Err": null
-                    },
-                    "OpenedPorts": null,
-                    "Charm": "",
-                    "AgentStateInfo": "hook failed: \"db-relation-joined\"",
-                    "AgentVersion": "2.0-beta2.1",
-                    "Machine": "3",
-                    "Life": "",
-                    "Err": null
-                },
-                "mysql/0": {
-                    "AgentState": "started",
-                    "PublicAddress": "10.0.3.175",
-                    "Workload": {
-                        "Kind": "",
-                        "Data": {
-                        },
-                        "Version": "",
-                        "Info": "",
-                        "Life": "",
-                        "Status": "unknown",
-                        "Since": "2016-03-14T14:41:36.157027118Z",
-                        "Err": null
-                    },
-                    "Subordinates": null,
-                    "UnitAgent": {
-                        "Kind": "",
-                        "Data": {
-                        },
-                        "Version": "2.0-beta2.1",
-                        "Info": "",
-                        "Life": "",
-                        "Status": "idle",
-                        "Since": "2016-03-14T23:25:12.03312202Z",
-                        "Err": null
-                    },
-                    "OpenedPorts": null,
-                    "Charm": "",
-                    "AgentStateInfo": "",
-                    "AgentVersion": "2.0-beta2.1",
-                    "Machine": "2",
-                    "Life": "",
-                    "Err": null
-                }
-            },
-            "CanUpgradeTo": "cs:trusty\/mysql-36",
-            "MeterStatuses": null,
-            "Life": "",
-            "SubordinateTo": [],
-            "Networks": {
-                "Disabled": null,
-                "Enabled": null
-            },
-            "Err": null,
-            "Relations": {
-                "cluster": [
-                    "mysql"
-                ],
-                "db": [
-                    "ghost"
-                ]
-            }
-        },
-        "ghost": {
-            "Exposed": false,
-            "Status": {
-                "Kind": "",
-                "Data": {
-                },
-                "Version": "",
-                "Info": "Ready",
-                "Life": "",
-                "Status": "active",
-                "Since": "2016-03-14T21:35:18.5035317Z",
-                "Err": null
-            },
-            "Charm": "cs:~adam-stokes\/trusty\/ghost-6",
-            "Units": {
-                "ghost/0": {
-                    "AgentState": "started",
-                    "PublicAddress": "10.0.3.240",
-                    "Workload": {
-                        "Kind": "",
-                        "Data": {
-                        },
-                        "Version": "",
-                        "Info": "Ready",
-                        "Life": "",
-                        "Status": "active",
-                        "Since": "2016-03-14T21:35:18.5035317Z",
-                        "Err": null
-                    },
-                    "Subordinates": null,
-                    "UnitAgent": {
-                        "Kind": "",
-                        "Data": {
-                        },
-                        "Version": "2.0-beta2.1",
-                        "Info": "",
-                        "Life": "",
-                        "Status": "idle",
-                        "Since": "2016-03-14T23:25:12.032445359Z",
-                        "Err": null
-                    },
-                    "OpenedPorts": null,
-                    "Charm": "",
-                    "AgentStateInfo": "",
-                    "AgentVersion": "2.0-beta2.1",
-                    "Machine": "0",
-                    "Life": "",
-                    "Err": null
-                }
-            },
-            "CanUpgradeTo": "cs:~adam-stokes\/trusty\/ghost-9",
-            "MeterStatuses": null,
-            "Life": "",
-            "SubordinateTo": [],
-            "Networks": {
-                "Disabled": null,
-                "Enabled": null
-            },
-            "Err": null,
-            "Relations": {
-                "website": [
-                    "haproxy"
-                ],
-                "database": [
-                    "mysql"
-                ]
-            }
-        }
-    },
-    "AvailableVersion": "",
     "Networks": {
     },
+    "AvailableVersion": "",
+    "Services": {
+        "secondary-namenode": {
+            "MeterStatuses": null,
+            "Err": null,
+            "Networks": {
+                "Disabled": null,
+                "Enabled": null
+            },
+            "Units": {
+                "secondary-namenode/0": {
+                    "PublicAddress": "10.0.3.88",
+                    "WorkloadStatus": {
+                        "Info": "installing charm software",
+                        "Err": null,
+                        "Version": "",
+                        "Kind": "",
+                        "Data": {
+                        },
+                        "Status": "maintenance",
+                        "Life": "",
+                        "Since": "2016-03-15T19:18:37.566171415Z"
+                    },
+                    "OpenedPorts": null,
+                    "AgentStatus": {
+                        "Info": "running install hook",
+                        "Err": null,
+                        "Version": "2.0-beta3.1",
+                        "Kind": "",
+                        "Data": {
+                        },
+                        "Status": "executing",
+                        "Life": "",
+                        "Since": "2016-03-15T19:18:37.602463253Z"
+                    },
+                    "Charm": "",
+                    "Subordinates": null,
+                    "Machine": "5"
+                }
+            },
+            "CanUpgradeTo": "",
+            "SubordinateTo": [],
+            "Charm": "cs:trusty\/apache-hadoop-hdfs-secondary-7",
+            "Life": "",
+            "Status": {
+                "Info": "installing charm software",
+                "Err": null,
+                "Version": "",
+                "Kind": "",
+                "Data": {
+                },
+                "Status": "maintenance",
+                "Life": "",
+                "Since": "2016-03-15T19:18:37.566171415Z"
+            },
+            "Exposed": false,
+            "Relations": {
+                "secondary": [
+                    "hdfs-master"
+                ]
+            }
+        },
+        "compute-slave": {
+            "MeterStatuses": null,
+            "Err": null,
+            "Networks": {
+                "Disabled": null,
+                "Enabled": null
+            },
+            "Units": {
+                "compute-slave/2": {
+                    "PublicAddress": "10.0.3.199",
+                    "WorkloadStatus": {
+                        "Info": "installing charm software",
+                        "Err": null,
+                        "Version": "",
+                        "Kind": "",
+                        "Data": {
+                        },
+                        "Status": "maintenance",
+                        "Life": "",
+                        "Since": "2016-03-15T19:16:09.60401078Z"
+                    },
+                    "OpenedPorts": null,
+                    "AgentStatus": {
+                        "Info": "running install hook",
+                        "Err": null,
+                        "Version": "2.0-beta3.1",
+                        "Kind": "",
+                        "Data": {
+                        },
+                        "Status": "executing",
+                        "Life": "",
+                        "Since": "2016-03-15T19:16:10.133688908Z"
+                    },
+                    "Charm": "",
+                    "Subordinates": null,
+                    "Machine": "2"
+                },
+                "compute-slave/1": {
+                    "PublicAddress": "10.0.3.115",
+                    "WorkloadStatus": {
+                        "Info": "installing charm software",
+                        "Err": null,
+                        "Version": "",
+                        "Kind": "",
+                        "Data": {
+                        },
+                        "Status": "maintenance",
+                        "Life": "",
+                        "Since": "2016-03-15T19:15:06.474090769Z"
+                    },
+                    "OpenedPorts": null,
+                    "AgentStatus": {
+                        "Info": "running install hook",
+                        "Err": null,
+                        "Version": "2.0-beta3.1",
+                        "Kind": "",
+                        "Data": {
+                        },
+                        "Status": "executing",
+                        "Life": "",
+                        "Since": "2016-03-15T19:15:06.476713103Z"
+                    },
+                    "Charm": "",
+                    "Subordinates": null,
+                    "Machine": "1"
+                },
+                "compute-slave/0": {
+                    "PublicAddress": "10.0.3.132",
+                    "WorkloadStatus": {
+                        "Info": "installing charm software",
+                        "Err": null,
+                        "Version": "",
+                        "Kind": "",
+                        "Data": {
+                        },
+                        "Status": "maintenance",
+                        "Life": "",
+                        "Since": "2016-03-15T19:16:03.508929917Z"
+                    },
+                    "OpenedPorts": null,
+                    "AgentStatus": {
+                        "Info": "running install hook",
+                        "Err": null,
+                        "Version": "2.0-beta3.1",
+                        "Kind": "",
+                        "Data": {
+                        },
+                        "Status": "executing",
+                        "Life": "",
+                        "Since": "2016-03-15T19:16:03.511936123Z"
+                    },
+                    "Charm": "",
+                    "Subordinates": null,
+                    "Machine": "0"
+                }
+            },
+            "CanUpgradeTo": "",
+            "SubordinateTo": [],
+            "Charm": "cs:trusty\/apache-hadoop-compute-slave-9",
+            "Life": "",
+            "Status": {
+                "Info": "installing charm software",
+                "Err": null,
+                "Version": "",
+                "Kind": "",
+                "Data": {
+                },
+                "Status": "maintenance",
+                "Life": "",
+                "Since": "2016-03-15T19:15:06.474090769Z"
+            },
+            "Exposed": false,
+            "Relations": {
+                "nodemanager": [
+                    "yarn-master"
+                ],
+                "datanode": [
+                    "hdfs-master"
+                ]
+            }
+        },
+        "pig": {
+            "MeterStatuses": null,
+            "Err": null,
+            "Networks": {
+                "Disabled": null,
+                "Enabled": null
+            },
+            "Units": {
+                "pig/0": {
+                    "PublicAddress": "10.0.3.4",
+                    "WorkloadStatus": {
+                        "Info": "installing charm software",
+                        "Err": null,
+                        "Version": "",
+                        "Kind": "",
+                        "Data": {
+                        },
+                        "Status": "maintenance",
+                        "Life": "",
+                        "Since": "2016-03-15T19:17:22.337639136Z"
+                    },
+                    "OpenedPorts": null,
+                    "AgentStatus": {
+                        "Info": "running install hook",
+                        "Err": null,
+                        "Version": "2.0-beta3.1",
+                        "Kind": "",
+                        "Data": {
+                        },
+                        "Status": "executing",
+                        "Life": "",
+                        "Since": "2016-03-15T19:17:22.457091028Z"
+                    },
+                    "Charm": "",
+                    "Subordinates": null,
+                    "Machine": "4"
+                }
+            },
+            "CanUpgradeTo": "",
+            "SubordinateTo": [],
+            "Charm": "cs:trusty\/apache-pig-7",
+            "Life": "",
+            "Status": {
+                "Info": "installing charm software",
+                "Err": null,
+                "Version": "",
+                "Kind": "",
+                "Data": {
+                },
+                "Status": "maintenance",
+                "Life": "",
+                "Since": "2016-03-15T19:17:22.337639136Z"
+            },
+            "Exposed": false,
+            "Relations": {
+                "hadoop-plugin": [
+                    "plugin"
+                ]
+            }
+        },
+        "hdfs-master": {
+            "MeterStatuses": null,
+            "Err": null,
+            "Networks": {
+                "Disabled": null,
+                "Enabled": null
+            },
+            "Units": {
+                "hdfs-master/0": {
+                    "PublicAddress": "10.0.3.189",
+                    "WorkloadStatus": {
+                        "Info": "installing charm software",
+                        "Err": null,
+                        "Version": "",
+                        "Kind": "",
+                        "Data": {
+                        },
+                        "Status": "maintenance",
+                        "Life": "",
+                        "Since": "2016-03-15T19:17:08.915187349Z"
+                    },
+                    "OpenedPorts": null,
+                    "AgentStatus": {
+                        "Info": "running install hook",
+                        "Err": null,
+                        "Version": "2.0-beta3.1",
+                        "Kind": "",
+                        "Data": {
+                        },
+                        "Status": "executing",
+                        "Life": "",
+                        "Since": "2016-03-15T19:17:09.075787944Z"
+                    },
+                    "Charm": "",
+                    "Subordinates": null,
+                    "Machine": "3"
+                }
+            },
+            "CanUpgradeTo": "",
+            "SubordinateTo": [],
+            "Charm": "cs:trusty\/apache-hadoop-hdfs-master-9",
+            "Life": "",
+            "Status": {
+                "Info": "installing charm software",
+                "Err": null,
+                "Version": "",
+                "Kind": "",
+                "Data": {
+                },
+                "Status": "maintenance",
+                "Life": "",
+                "Since": "2016-03-15T19:17:08.915187349Z"
+            },
+            "Exposed": false,
+            "Relations": {
+                "namenode": [
+                    "plugin",
+                    "yarn-master"
+                ],
+                "datanode": [
+                    "compute-slave"
+                ],
+                "secondary": [
+                    "secondary-namenode"
+                ]
+            }
+        },
+        "plugin": {
+            "MeterStatuses": null,
+            "Err": null,
+            "Networks": {
+                "Disabled": null,
+                "Enabled": null
+            },
+            "Units": null,
+            "CanUpgradeTo": "",
+            "SubordinateTo": [
+                "pig"
+            ],
+            "Charm": "cs:trusty\/apache-hadoop-plugin-10",
+            "Life": "",
+            "Status": {
+                "Info": "",
+                "Err": null,
+                "Version": "",
+                "Kind": "",
+                "Data": null,
+                "Status": "",
+                "Life": "",
+                "Since": null
+            },
+            "Exposed": false,
+            "Relations": {
+                "hadoop-plugin": [
+                    "pig"
+                ],
+                "namenode": [
+                    "hdfs-master"
+                ],
+                "resourcemanager": [
+                    "yarn-master"
+                ]
+            }
+        },
+        "yarn-master": {
+            "MeterStatuses": null,
+            "Err": null,
+            "Networks": {
+                "Disabled": null,
+                "Enabled": null
+            },
+            "Units": {
+                "yarn-master/0": {
+                    "PublicAddress": "",
+                    "WorkloadStatus": {
+                        "Info": "Waiting for agent initialization to finish",
+                        "Err": null,
+                        "Version": "",
+                        "Kind": "",
+                        "Data": {
+                        },
+                        "Status": "unknown",
+                        "Life": "",
+                        "Since": "2016-03-15T19:13:34.336775998Z"
+                    },
+                    "OpenedPorts": null,
+                    "AgentStatus": {
+                        "Info": "",
+                        "Err": null,
+                        "Version": "",
+                        "Kind": "",
+                        "Data": {
+                        },
+                        "Status": "allocating",
+                        "Life": "",
+                        "Since": "2016-03-15T19:13:34.336775998Z"
+                    },
+                    "Charm": "",
+                    "Subordinates": null,
+                    "Machine": "6"
+                }
+            },
+            "CanUpgradeTo": "",
+            "SubordinateTo": [],
+            "Charm": "cs:trusty\/apache-hadoop-yarn-master-7",
+            "Life": "",
+            "Status": {
+                "Info": "Waiting for agent initialization to finish",
+                "Err": null,
+                "Version": "",
+                "Kind": "",
+                "Data": {
+                },
+                "Status": "unknown",
+                "Life": "",
+                "Since": "2016-03-15T19:13:34.336775998Z"
+            },
+            "Exposed": false,
+            "Relations": {
+                "namenode": [
+                    "hdfs-master"
+                ],
+                "nodemanager": [
+                    "compute-slave"
+                ],
+                "resourcemanager": [
+                    "plugin"
+                ]
+            }
+        }
+    },
+    "Machines": {
+        "0": {
+            "InstanceStatus": {
+                "Info": "Running",
+                "Err": null,
+                "Version": "",
+                "Kind": "",
+                "Data": {
+                },
+                "Status": "running",
+                "Life": "",
+                "Since": "2016-03-15T19:14:03.338135427Z"
+            },
+            "Jobs": [
+                "JobHostUnits"
+            ],
+            "WantsVote": false,
+            "HasVote": false,
+            "InstanceId": "juju-7b9fc55a-ad5d-48a6-84c6-c3705a7dde7e-machine-0",
+            "AgentStatus": {
+                "Info": "",
+                "Err": null,
+                "Version": "2.0-beta3.1",
+                "Kind": "",
+                "Data": {
+                },
+                "Status": "started",
+                "Life": "",
+                "Since": "2016-03-15T19:16:01.874505955Z"
+            },
+            "Id": "0",
+            "DNSName": "10.0.3.132",
+            "Containers": {
+            },
+            "Series": "trusty",
+            "Hardware": "arch=amd64 cpu-cores=0 mem=0M"
+        },
+        "1": {
+            "InstanceStatus": {
+                "Info": "Running",
+                "Err": null,
+                "Version": "",
+                "Kind": "",
+                "Data": {
+                },
+                "Status": "running",
+                "Life": "",
+                "Since": "2016-03-15T19:14:40.247083672Z"
+            },
+            "Jobs": [
+                "JobHostUnits"
+            ],
+            "WantsVote": false,
+            "HasVote": false,
+            "InstanceId": "juju-7b9fc55a-ad5d-48a6-84c6-c3705a7dde7e-machine-1",
+            "AgentStatus": {
+                "Info": "",
+                "Err": null,
+                "Version": "2.0-beta3.1",
+                "Kind": "",
+                "Data": {
+                },
+                "Status": "started",
+                "Life": "",
+                "Since": "2016-03-15T19:15:06.113692886Z"
+            },
+            "Id": "1",
+            "DNSName": "10.0.3.115",
+            "Containers": {
+            },
+            "Series": "trusty",
+            "Hardware": "arch=amd64 cpu-cores=0 mem=0M"
+        },
+        "3": {
+            "InstanceStatus": {
+                "Info": "Running",
+                "Err": null,
+                "Version": "",
+                "Kind": "",
+                "Data": {
+                },
+                "Status": "running",
+                "Life": "",
+                "Since": "2016-03-15T19:15:46.619359329Z"
+            },
+            "Jobs": [
+                "JobHostUnits"
+            ],
+            "WantsVote": false,
+            "HasVote": false,
+            "InstanceId": "juju-7b9fc55a-ad5d-48a6-84c6-c3705a7dde7e-machine-3",
+            "AgentStatus": {
+                "Info": "",
+                "Err": null,
+                "Version": "2.0-beta3.1",
+                "Kind": "",
+                "Data": {
+                },
+                "Status": "started",
+                "Life": "",
+                "Since": "2016-03-15T19:17:08.385937689Z"
+            },
+            "Id": "3",
+            "DNSName": "10.0.3.189",
+            "Containers": {
+            },
+            "Series": "trusty",
+            "Hardware": "arch=amd64 cpu-cores=0 mem=0M"
+        },
+        "5": {
+            "InstanceStatus": {
+                "Info": "Running",
+                "Err": null,
+                "Version": "",
+                "Kind": "",
+                "Data": {
+                },
+                "Status": "running",
+                "Life": "",
+                "Since": "2016-03-15T19:17:54.895140997Z"
+            },
+            "Jobs": [
+                "JobHostUnits"
+            ],
+            "WantsVote": false,
+            "HasVote": false,
+            "InstanceId": "juju-7b9fc55a-ad5d-48a6-84c6-c3705a7dde7e-machine-5",
+            "AgentStatus": {
+                "Info": "",
+                "Err": null,
+                "Version": "2.0-beta3.1",
+                "Kind": "",
+                "Data": {
+                },
+                "Status": "started",
+                "Life": "",
+                "Since": "2016-03-15T19:18:37.012703138Z"
+            },
+            "Id": "5",
+            "DNSName": "10.0.3.88",
+            "Containers": {
+            },
+            "Series": "trusty",
+            "Hardware": "arch=amd64 cpu-cores=0 mem=0M"
+        },
+        "4": {
+            "InstanceStatus": {
+                "Info": "Running",
+                "Err": null,
+                "Version": "",
+                "Kind": "",
+                "Data": {
+                },
+                "Status": "running",
+                "Life": "",
+                "Since": "2016-03-15T19:17:53.892739411Z"
+            },
+            "Jobs": [
+                "JobHostUnits"
+            ],
+            "WantsVote": false,
+            "HasVote": false,
+            "InstanceId": "juju-7b9fc55a-ad5d-48a6-84c6-c3705a7dde7e-machine-4",
+            "AgentStatus": {
+                "Info": "",
+                "Err": null,
+                "Version": "2.0-beta3.1",
+                "Kind": "",
+                "Data": {
+                },
+                "Status": "started",
+                "Life": "",
+                "Since": "2016-03-15T19:17:21.907753494Z"
+            },
+            "Id": "4",
+            "DNSName": "10.0.3.4",
+            "Containers": {
+            },
+            "Series": "trusty",
+            "Hardware": "arch=amd64 cpu-cores=0 mem=0M"
+        },
+        "6": {
+            "InstanceStatus": {
+                "Info": "",
+                "Err": null,
+                "Version": "",
+                "Kind": "",
+                "Data": {
+                },
+                "Status": "pending",
+                "Life": "",
+                "Since": "2016-03-15T19:13:34.530168423Z"
+            },
+            "Jobs": [
+                "JobHostUnits"
+            ],
+            "WantsVote": false,
+            "HasVote": false,
+            "InstanceId": "pending",
+            "AgentStatus": {
+                "Info": "",
+                "Err": null,
+                "Version": "",
+                "Kind": "",
+                "Data": {
+                },
+                "Status": "pending",
+                "Life": "",
+                "Since": "2016-03-15T19:13:34.53016829Z"
+            },
+            "Id": "6",
+            "DNSName": "",
+            "Containers": {
+            },
+            "Series": "trusty",
+            "Hardware": ""
+        },
+        "2": {
+            "InstanceStatus": {
+                "Info": "Running",
+                "Err": null,
+                "Version": "",
+                "Kind": "",
+                "Data": {
+                },
+                "Status": "running",
+                "Life": "",
+                "Since": "2016-03-15T19:15:45.680010138Z"
+            },
+            "Jobs": [
+                "JobHostUnits"
+            ],
+            "WantsVote": false,
+            "HasVote": false,
+            "InstanceId": "juju-7b9fc55a-ad5d-48a6-84c6-c3705a7dde7e-machine-2",
+            "AgentStatus": {
+                "Info": "",
+                "Err": null,
+                "Version": "2.0-beta3.1",
+                "Kind": "",
+                "Data": {
+                },
+                "Status": "started",
+                "Life": "",
+                "Since": "2016-03-15T19:16:08.685223304Z"
+            },
+            "Id": "2",
+            "DNSName": "10.0.3.199",
+            "Containers": {
+            },
+            "Series": "trusty",
+            "Hardware": "arch=amd64 cpu-cores=0 mem=0M"
+        }
+    },
+    "ModelName": "staging",
     "Relations": [
         {
-            "Scope": "global",
+            "Id": 2,
+            "Key": "yarn-master:nodemanager compute-slave:nodemanager",
+            "Interface": "mapred-slave",
             "Endpoints": [
                 {
-                    "Name": "peer",
-                    "ServiceName": "haproxy",
+                    "Name": "nodemanager",
                     "Subordinate": false,
-                    "Role": "peer"
-                }
-            ],
-            "Interface": "haproxy-peer",
-            "Key": "haproxy:peer",
-            "Id": 0
-        },
-        {
-            "Scope": "global",
-            "Endpoints": [
-                {
-                    "Name": "website",
-                    "ServiceName": "ghost",
-                    "Subordinate": false,
-                    "Role": "provider"
+                    "Role": "provider",
+                    "ServiceName": "compute-slave"
                 },
                 {
-                    "Name": "reverseproxy",
-                    "ServiceName": "haproxy",
+                    "Name": "nodemanager",
                     "Subordinate": false,
-                    "Role": "requirer"
+                    "Role": "requirer",
+                    "ServiceName": "yarn-master"
                 }
             ],
-            "Interface": "http",
-            "Key": "haproxy:reverseproxy ghost:website",
-            "Id": 3
+            "Scope": "global"
         },
         {
-            "Scope": "global",
+            "Id": 3,
+            "Key": "hdfs-master:datanode compute-slave:datanode",
+            "Interface": "dfs-slave",
             "Endpoints": [
                 {
-                    "Name": "cluster",
-                    "ServiceName": "mysql",
+                    "Name": "datanode",
                     "Subordinate": false,
-                    "Role": "peer"
-                }
-            ],
-            "Interface": "mysql-ha",
-            "Key": "mysql:cluster",
-            "Id": 1
-        },
-        {
-            "Scope": "global",
-            "Endpoints": [
-                {
-                    "Name": "db",
-                    "ServiceName": "mysql",
-                    "Subordinate": false,
-                    "Role": "provider"
+                    "Role": "provider",
+                    "ServiceName": "compute-slave"
                 },
                 {
-                    "Name": "database",
-                    "ServiceName": "ghost",
+                    "Name": "datanode",
                     "Subordinate": false,
-                    "Role": "requirer"
+                    "Role": "requirer",
+                    "ServiceName": "hdfs-master"
                 }
             ],
-            "Interface": "mysql",
-            "Key": "ghost:database mysql:db",
-            "Id": 2
+            "Scope": "global"
+        },
+        {
+            "Id": 4,
+            "Key": "plugin:resourcemanager yarn-master:resourcemanager",
+            "Interface": "mapred",
+            "Endpoints": [
+                {
+                    "Name": "resourcemanager",
+                    "Subordinate": false,
+                    "Role": "requirer",
+                    "ServiceName": "plugin"
+                },
+                {
+                    "Name": "resourcemanager",
+                    "Subordinate": false,
+                    "Role": "provider",
+                    "ServiceName": "yarn-master"
+                }
+            ],
+            "Scope": "global"
+        },
+        {
+            "Id": 5,
+            "Key": "plugin:namenode hdfs-master:namenode",
+            "Interface": "dfs",
+            "Endpoints": [
+                {
+                    "Name": "namenode",
+                    "Subordinate": false,
+                    "Role": "requirer",
+                    "ServiceName": "plugin"
+                },
+                {
+                    "Name": "namenode",
+                    "Subordinate": false,
+                    "Role": "provider",
+                    "ServiceName": "hdfs-master"
+                }
+            ],
+            "Scope": "global"
+        },
+        {
+            "Id": 6,
+            "Key": "plugin:hadoop-plugin pig:hadoop-plugin",
+            "Interface": "hadoop-plugin",
+            "Endpoints": [
+                {
+                    "Name": "hadoop-plugin",
+                    "Subordinate": false,
+                    "Role": "provider",
+                    "ServiceName": "pig"
+                },
+                {
+                    "Name": "hadoop-plugin",
+                    "Subordinate": true,
+                    "Role": "requirer",
+                    "ServiceName": "plugin"
+                }
+            ],
+            "Scope": "container"
+        },
+        {
+            "Id": 0,
+            "Key": "yarn-master:namenode hdfs-master:namenode",
+            "Interface": "dfs",
+            "Endpoints": [
+                {
+                    "Name": "namenode",
+                    "Subordinate": false,
+                    "Role": "requirer",
+                    "ServiceName": "yarn-master"
+                },
+                {
+                    "Name": "namenode",
+                    "Subordinate": false,
+                    "Role": "provider",
+                    "ServiceName": "hdfs-master"
+                }
+            ],
+            "Scope": "global"
+        },
+        {
+            "Id": 1,
+            "Key": "hdfs-master:secondary secondary-namenode:secondary",
+            "Interface": "dfs-secondary",
+            "Endpoints": [
+                {
+                    "Name": "secondary",
+                    "Subordinate": false,
+                    "Role": "provider",
+                    "ServiceName": "secondary-namenode"
+                },
+                {
+                    "Name": "secondary",
+                    "Subordinate": false,
+                    "Role": "requirer",
+                    "ServiceName": "hdfs-master"
+                }
+            ],
+            "Scope": "global"
         }
     ]
 }

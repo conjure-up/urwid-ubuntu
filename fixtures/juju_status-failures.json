@@ -1,0 +1,845 @@
+{
+    "ModelName": "staging",
+    "Networks": {
+    },
+    "Machines": {
+        "0": {
+            "InstanceStatus": {
+                "Info": "Running",
+                "Version": "",
+                "Err": null,
+                "Life": "",
+                "Data": {
+                },
+                "Status": "running",
+                "Kind": "",
+                "Since": "2016-03-15T19:14:03.338135427Z"
+            },
+            "DNSName": "10.0.3.132",
+            "InstanceId": "juju-7b9fc55a-ad5d-48a6-84c6-c3705a7dde7e-machine-0",
+            "Hardware": "arch=amd64 cpu-cores=0 mem=0M",
+            "HasVote": false,
+            "Jobs": [
+                "JobHostUnits"
+            ],
+            "AgentStatus": {
+                "Info": "",
+                "Version": "2.0-beta3.1",
+                "Err": null,
+                "Life": "",
+                "Data": {
+                },
+                "Status": "started",
+                "Kind": "",
+                "Since": "2016-03-15T19:16:01.874505955Z"
+            },
+            "Containers": {
+            },
+            "Series": "trusty",
+            "Id": "0",
+            "WantsVote": false
+        },
+        "2": {
+            "InstanceStatus": {
+                "Info": "Running",
+                "Version": "",
+                "Err": null,
+                "Life": "",
+                "Data": {
+                },
+                "Status": "running",
+                "Kind": "",
+                "Since": "2016-03-15T19:15:45.680010138Z"
+            },
+            "DNSName": "10.0.3.199",
+            "InstanceId": "juju-7b9fc55a-ad5d-48a6-84c6-c3705a7dde7e-machine-2",
+            "Hardware": "arch=amd64 cpu-cores=0 mem=0M",
+            "HasVote": false,
+            "Jobs": [
+                "JobHostUnits"
+            ],
+            "AgentStatus": {
+                "Info": "",
+                "Version": "2.0-beta3.1",
+                "Err": null,
+                "Life": "",
+                "Data": {
+                },
+                "Status": "started",
+                "Kind": "",
+                "Since": "2016-03-15T19:16:08.685223304Z"
+            },
+            "Containers": {
+            },
+            "Series": "trusty",
+            "Id": "2",
+            "WantsVote": false
+        },
+        "3": {
+            "InstanceStatus": {
+                "Info": "Running",
+                "Version": "",
+                "Err": null,
+                "Life": "",
+                "Data": {
+                },
+                "Status": "running",
+                "Kind": "",
+                "Since": "2016-03-15T19:15:46.619359329Z"
+            },
+            "DNSName": "10.0.3.189",
+            "InstanceId": "juju-7b9fc55a-ad5d-48a6-84c6-c3705a7dde7e-machine-3",
+            "Hardware": "arch=amd64 cpu-cores=0 mem=0M",
+            "HasVote": false,
+            "Jobs": [
+                "JobHostUnits"
+            ],
+            "AgentStatus": {
+                "Info": "",
+                "Version": "2.0-beta3.1",
+                "Err": null,
+                "Life": "",
+                "Data": {
+                },
+                "Status": "started",
+                "Kind": "",
+                "Since": "2016-03-15T19:17:08.385937689Z"
+            },
+            "Containers": {
+            },
+            "Series": "trusty",
+            "Id": "3",
+            "WantsVote": false
+        },
+        "5": {
+            "InstanceStatus": {
+                "Info": "Running",
+                "Version": "",
+                "Err": null,
+                "Life": "",
+                "Data": {
+                },
+                "Status": "running",
+                "Kind": "",
+                "Since": "2016-03-15T19:17:54.895140997Z"
+            },
+            "DNSName": "10.0.3.88",
+            "InstanceId": "juju-7b9fc55a-ad5d-48a6-84c6-c3705a7dde7e-machine-5",
+            "Hardware": "arch=amd64 cpu-cores=0 mem=0M",
+            "HasVote": false,
+            "Jobs": [
+                "JobHostUnits"
+            ],
+            "AgentStatus": {
+                "Info": "",
+                "Version": "2.0-beta3.1",
+                "Err": null,
+                "Life": "",
+                "Data": {
+                },
+                "Status": "started",
+                "Kind": "",
+                "Since": "2016-03-15T19:18:37.012703138Z"
+            },
+            "Containers": {
+            },
+            "Series": "trusty",
+            "Id": "5",
+            "WantsVote": false
+        },
+        "1": {
+            "InstanceStatus": {
+                "Info": "Running",
+                "Version": "",
+                "Err": null,
+                "Life": "",
+                "Data": {
+                },
+                "Status": "running",
+                "Kind": "",
+                "Since": "2016-03-15T19:14:40.247083672Z"
+            },
+            "DNSName": "10.0.3.115",
+            "InstanceId": "juju-7b9fc55a-ad5d-48a6-84c6-c3705a7dde7e-machine-1",
+            "Hardware": "arch=amd64 cpu-cores=0 mem=0M",
+            "HasVote": false,
+            "Jobs": [
+                "JobHostUnits"
+            ],
+            "AgentStatus": {
+                "Info": "",
+                "Version": "2.0-beta3.1",
+                "Err": null,
+                "Life": "",
+                "Data": {
+                },
+                "Status": "started",
+                "Kind": "",
+                "Since": "2016-03-15T19:15:06.113692886Z"
+            },
+            "Containers": {
+            },
+            "Series": "trusty",
+            "Id": "1",
+            "WantsVote": false
+        },
+        "4": {
+            "InstanceStatus": {
+                "Info": "Running",
+                "Version": "",
+                "Err": null,
+                "Life": "",
+                "Data": {
+                },
+                "Status": "running",
+                "Kind": "",
+                "Since": "2016-03-15T19:17:53.892739411Z"
+            },
+            "DNSName": "10.0.3.4",
+            "InstanceId": "juju-7b9fc55a-ad5d-48a6-84c6-c3705a7dde7e-machine-4",
+            "Hardware": "arch=amd64 cpu-cores=0 mem=0M",
+            "HasVote": false,
+            "Jobs": [
+                "JobHostUnits"
+            ],
+            "AgentStatus": {
+                "Info": "",
+                "Version": "2.0-beta3.1",
+                "Err": null,
+                "Life": "",
+                "Data": {
+                },
+                "Status": "started",
+                "Kind": "",
+                "Since": "2016-03-15T19:17:21.907753494Z"
+            },
+            "Containers": {
+            },
+            "Series": "trusty",
+            "Id": "4",
+            "WantsVote": false
+        },
+        "6": {
+            "InstanceStatus": {
+                "Info": "",
+                "Version": "",
+                "Err": null,
+                "Life": "",
+                "Data": {
+                },
+                "Status": "pending",
+                "Kind": "",
+                "Since": "2016-03-15T19:13:34.530168423Z"
+            },
+            "DNSName": "",
+            "InstanceId": "pending",
+            "Hardware": "",
+            "HasVote": false,
+            "Jobs": [
+                "JobHostUnits"
+            ],
+            "AgentStatus": {
+                "Info": "",
+                "Version": "",
+                "Err": null,
+                "Life": "",
+                "Data": {
+                },
+                "Status": "pending",
+                "Kind": "",
+                "Since": "2016-03-15T19:13:34.53016829Z"
+            },
+            "Containers": {
+            },
+            "Series": "trusty",
+            "Id": "6",
+            "WantsVote": false
+        }
+    },
+    "AvailableVersion": "",
+    "Services": {
+        "yarn-master": {
+            "SubordinateTo": [],
+            "Relations": {
+                "resourcemanager": [
+                    "plugin"
+                ],
+                "nodemanager": [
+                    "compute-slave"
+                ],
+                "namenode": [
+                    "hdfs-master"
+                ]
+            },
+            "Charm": "cs:trusty\/apache-hadoop-yarn-master-7",
+            "Networks": {
+                "Enabled": null,
+                "Disabled": null
+            },
+            "Life": "",
+            "Exposed": false,
+            "Err": null,
+            "Units": {
+                "yarn-master/0": {
+                    "PublicAddress": "",
+                    "Charm": "",
+                    "Subordinates": null,
+                    "Machine": "6",
+                    "OpenedPorts": null,
+                    "AgentStatus": {
+                        "Info": "",
+                        "Version": "",
+                        "Err": null,
+                        "Life": "",
+                        "Data": {
+                        },
+                        "Status": "allocating",
+                        "Kind": "",
+                        "Since": "2016-03-15T19:13:34.336775998Z"
+                    },
+                    "WorkloadStatus": {
+                        "Info": "Waiting for agent initialization to finish",
+                        "Version": "",
+                        "Err": null,
+                        "Life": "",
+                        "Data": {
+                        },
+                        "Status": "unknown",
+                        "Kind": "",
+                        "Since": "2016-03-15T19:13:34.336775998Z"
+                    }
+                }
+            },
+            "Status": {
+                "Info": "Waiting for agent initialization to finish",
+                "Version": "",
+                "Err": null,
+                "Life": "",
+                "Data": {
+                },
+                "Status": "unknown",
+                "Kind": "",
+                "Since": "2016-03-15T19:13:34.336775998Z"
+            },
+            "CanUpgradeTo": "",
+            "MeterStatuses": null
+        },
+        "hdfs-master": {
+            "SubordinateTo": [],
+            "Relations": {
+                "datanode": [
+                    "compute-slave"
+                ],
+                "secondary": [
+                    "secondary-namenode"
+                ],
+                "namenode": [
+                    "plugin",
+                    "yarn-master"
+                ]
+            },
+            "Charm": "cs:trusty\/apache-hadoop-hdfs-master-9",
+            "Networks": {
+                "Enabled": null,
+                "Disabled": null
+            },
+            "Life": "",
+            "Exposed": false,
+            "Err": null,
+            "Units": {
+                "hdfs-master/0": {
+                    "PublicAddress": "10.0.3.189",
+                    "Charm": "",
+                    "Subordinates": null,
+                    "Machine": "3",
+                    "OpenedPorts": null,
+                    "AgentStatus": {
+                        "Info": "",
+                        "Version": "2.0-beta3.1",
+                        "Err": null,
+                        "Life": "",
+                        "Data": {
+                        },
+                        "Status": "idle",
+                        "Kind": "",
+                        "Since": "2016-03-15T19:27:53.403533162Z"
+                    },
+                    "WorkloadStatus": {
+                        "Info": "Unable to fetch required resources: pathlib, jujubigdata",
+                        "Version": "",
+                        "Err": null,
+                        "Life": "",
+                        "Data": {
+                        },
+                        "Status": "blocked",
+                        "Kind": "",
+                        "Since": "2016-03-15T19:23:00.433976254Z"
+                    }
+                }
+            },
+            "Status": {
+                "Info": "Unable to fetch required resources: pathlib, jujubigdata",
+                "Version": "",
+                "Err": null,
+                "Life": "",
+                "Data": {
+                },
+                "Status": "blocked",
+                "Kind": "",
+                "Since": "2016-03-15T19:23:00.433976254Z"
+            },
+            "CanUpgradeTo": "",
+            "MeterStatuses": null
+        },
+        "compute-slave": {
+            "SubordinateTo": [],
+            "Relations": {
+                "datanode": [
+                    "hdfs-master"
+                ],
+                "nodemanager": [
+                    "yarn-master"
+                ]
+            },
+            "Charm": "cs:trusty\/apache-hadoop-compute-slave-9",
+            "Networks": {
+                "Enabled": null,
+                "Disabled": null
+            },
+            "Life": "",
+            "Exposed": false,
+            "Err": null,
+            "Units": {
+                "compute-slave/1": {
+                    "PublicAddress": "10.0.3.115",
+                    "Charm": "",
+                    "Subordinates": null,
+                    "Machine": "1",
+                    "OpenedPorts": null,
+                    "AgentStatus": {
+                        "Info": "",
+                        "Version": "2.0-beta3.1",
+                        "Err": null,
+                        "Life": "",
+                        "Data": {
+                        },
+                        "Status": "idle",
+                        "Kind": "",
+                        "Since": "2016-03-15T19:26:43.326193349Z"
+                    },
+                    "WorkloadStatus": {
+                        "Info": "Unable to fetch required resources: pathlib, jujubigdata",
+                        "Version": "",
+                        "Err": null,
+                        "Life": "",
+                        "Data": {
+                        },
+                        "Status": "blocked",
+                        "Kind": "",
+                        "Since": "2016-03-15T19:21:57.331650302Z"
+                    }
+                },
+                "compute-slave/2": {
+                    "PublicAddress": "10.0.3.199",
+                    "Charm": "",
+                    "Subordinates": null,
+                    "Machine": "2",
+                    "OpenedPorts": null,
+                    "AgentStatus": {
+                        "Info": "",
+                        "Version": "2.0-beta3.1",
+                        "Err": null,
+                        "Life": "",
+                        "Data": {
+                        },
+                        "Status": "idle",
+                        "Kind": "",
+                        "Since": "2016-03-15T19:26:43.328728673Z"
+                    },
+                    "WorkloadStatus": {
+                        "Info": "Unable to fetch required resources: pathlib, jujubigdata",
+                        "Version": "",
+                        "Err": null,
+                        "Life": "",
+                        "Data": {
+                        },
+                        "Status": "blocked",
+                        "Kind": "",
+                        "Since": "2016-03-15T19:21:57.488300933Z"
+                    }
+                },
+                "compute-slave/0": {
+                    "PublicAddress": "10.0.3.132",
+                    "Charm": "",
+                    "Subordinates": null,
+                    "Machine": "0",
+                    "OpenedPorts": null,
+                    "AgentStatus": {
+                        "Info": "",
+                        "Version": "2.0-beta3.1",
+                        "Err": null,
+                        "Life": "",
+                        "Data": {
+                        },
+                        "Status": "idle",
+                        "Kind": "",
+                        "Since": "2016-03-15T19:26:43.328230692Z"
+                    },
+                    "WorkloadStatus": {
+                        "Info": "Unable to fetch required resources: pathlib, jujubigdata",
+                        "Version": "",
+                        "Err": null,
+                        "Life": "",
+                        "Data": {
+                        },
+                        "Status": "blocked",
+                        "Kind": "",
+                        "Since": "2016-03-15T19:21:58.32889524Z"
+                    }
+                }
+            },
+            "Status": {
+                "Info": "Unable to fetch required resources: pathlib, jujubigdata",
+                "Version": "",
+                "Err": null,
+                "Life": "",
+                "Data": {
+                },
+                "Status": "blocked",
+                "Kind": "",
+                "Since": "2016-03-15T19:21:57.331650302Z"
+            },
+            "CanUpgradeTo": "",
+            "MeterStatuses": null
+        },
+        "plugin": {
+            "SubordinateTo": [
+                "pig"
+            ],
+            "Relations": {
+                "namenode": [
+                    "hdfs-master"
+                ],
+                "resourcemanager": [
+                    "yarn-master"
+                ],
+                "hadoop-plugin": [
+                    "pig"
+                ]
+            },
+            "Charm": "cs:trusty\/apache-hadoop-plugin-10",
+            "Networks": {
+                "Enabled": null,
+                "Disabled": null
+            },
+            "Life": "",
+            "Exposed": false,
+            "Err": null,
+            "Units": null,
+            "Status": {
+                "Info": "",
+                "Version": "",
+                "Err": null,
+                "Life": "",
+                "Data": null,
+                "Status": "",
+                "Kind": "",
+                "Since": null
+            },
+            "CanUpgradeTo": "",
+            "MeterStatuses": null
+        },
+        "pig": {
+            "SubordinateTo": [],
+            "Relations": {
+                "hadoop-plugin": [
+                    "plugin"
+                ]
+            },
+            "Charm": "cs:trusty\/apache-pig-7",
+            "Networks": {
+                "Enabled": null,
+                "Disabled": null
+            },
+            "Life": "",
+            "Exposed": false,
+            "Err": null,
+            "Units": {
+                "pig/0": {
+                    "PublicAddress": "10.0.3.4",
+                    "Charm": "",
+                    "Subordinates": {
+                        "plugin/0": {
+                            "PublicAddress": "10.0.3.4",
+                            "Charm": "cs:trusty\/apache-hadoop-plugin-10",
+                            "Subordinates": null,
+                            "Machine": "",
+                            "OpenedPorts": null,
+                            "AgentStatus": {
+                                "Info": "",
+                                "Version": "2.0-beta3.1",
+                                "Err": null,
+                                "Life": "",
+                                "Data": {
+                                },
+                                "Status": "idle",
+                                "Kind": "",
+                                "Since": "2016-03-15T19:27:04.064631362Z"
+                            },
+                            "WorkloadStatus": {
+                                "Info": "Unable to fetch required resources: pathlib, jujubigdata",
+                                "Version": "",
+                                "Err": null,
+                                "Life": "",
+                                "Data": {
+                                },
+                                "Status": "blocked",
+                                "Kind": "",
+                                "Since": "2016-03-15T19:23:03.28430806Z"
+                            }
+                        }
+                    },
+                    "Machine": "4",
+                    "OpenedPorts": null,
+                    "AgentStatus": {
+                        "Info": "",
+                        "Version": "2.0-beta3.1",
+                        "Err": null,
+                        "Life": "",
+                        "Data": {
+                        },
+                        "Status": "idle",
+                        "Kind": "",
+                        "Since": "2016-03-15T19:27:53.403577676Z"
+                    },
+                    "WorkloadStatus": {
+                        "Info": "Unable to fetch required resources: pathlib, jujubigdata",
+                        "Version": "",
+                        "Err": null,
+                        "Life": "",
+                        "Data": {
+                        },
+                        "Status": "blocked",
+                        "Kind": "",
+                        "Since": "2016-03-15T19:23:09.527766266Z"
+                    }
+                }
+            },
+            "Status": {
+                "Info": "Unable to fetch required resources: pathlib, jujubigdata",
+                "Version": "",
+                "Err": null,
+                "Life": "",
+                "Data": {
+                },
+                "Status": "blocked",
+                "Kind": "",
+                "Since": "2016-03-15T19:23:09.527766266Z"
+            },
+            "CanUpgradeTo": "",
+            "MeterStatuses": null
+        },
+        "secondary-namenode": {
+            "SubordinateTo": [],
+            "Relations": {
+                "secondary": [
+                    "hdfs-master"
+                ]
+            },
+            "Charm": "cs:trusty\/apache-hadoop-hdfs-secondary-7",
+            "Networks": {
+                "Enabled": null,
+                "Disabled": null
+            },
+            "Life": "",
+            "Exposed": false,
+            "Err": null,
+            "Units": {
+                "secondary-namenode/0": {
+                    "PublicAddress": "10.0.3.88",
+                    "Charm": "",
+                    "Subordinates": null,
+                    "Machine": "5",
+                    "OpenedPorts": null,
+                    "AgentStatus": {
+                        "Info": "",
+                        "Version": "2.0-beta3.1",
+                        "Err": null,
+                        "Life": "",
+                        "Data": {
+                        },
+                        "Status": "idle",
+                        "Kind": "",
+                        "Since": "2016-03-15T19:26:43.326429585Z"
+                    },
+                    "WorkloadStatus": {
+                        "Info": "Unable to fetch required resources: pathlib, jujubigdata",
+                        "Version": "",
+                        "Err": null,
+                        "Life": "",
+                        "Data": {
+                        },
+                        "Status": "blocked",
+                        "Kind": "",
+                        "Since": "2016-03-15T19:22:52.719823199Z"
+                    }
+                }
+            },
+            "Status": {
+                "Info": "Unable to fetch required resources: pathlib, jujubigdata",
+                "Version": "",
+                "Err": null,
+                "Life": "",
+                "Data": {
+                },
+                "Status": "blocked",
+                "Kind": "",
+                "Since": "2016-03-15T19:22:52.719823199Z"
+            },
+            "CanUpgradeTo": "",
+            "MeterStatuses": null
+        }
+    },
+    "Relations": [
+        {
+            "Scope": "global",
+            "Endpoints": [
+                {
+                    "Role": "provider",
+                    "Subordinate": false,
+                    "ServiceName": "secondary-namenode",
+                    "Name": "secondary"
+                },
+                {
+                    "Role": "requirer",
+                    "Subordinate": false,
+                    "ServiceName": "hdfs-master",
+                    "Name": "secondary"
+                }
+            ],
+            "Key": "hdfs-master:secondary secondary-namenode:secondary",
+            "Id": 1,
+            "Interface": "dfs-secondary"
+        },
+        {
+            "Scope": "global",
+            "Endpoints": [
+                {
+                    "Role": "provider",
+                    "Subordinate": false,
+                    "ServiceName": "compute-slave",
+                    "Name": "nodemanager"
+                },
+                {
+                    "Role": "requirer",
+                    "Subordinate": false,
+                    "ServiceName": "yarn-master",
+                    "Name": "nodemanager"
+                }
+            ],
+            "Key": "yarn-master:nodemanager compute-slave:nodemanager",
+            "Id": 2,
+            "Interface": "mapred-slave"
+        },
+        {
+            "Scope": "global",
+            "Endpoints": [
+                {
+                    "Role": "provider",
+                    "Subordinate": false,
+                    "ServiceName": "compute-slave",
+                    "Name": "datanode"
+                },
+                {
+                    "Role": "requirer",
+                    "Subordinate": false,
+                    "ServiceName": "hdfs-master",
+                    "Name": "datanode"
+                }
+            ],
+            "Key": "hdfs-master:datanode compute-slave:datanode",
+            "Id": 3,
+            "Interface": "dfs-slave"
+        },
+        {
+            "Scope": "global",
+            "Endpoints": [
+                {
+                    "Role": "requirer",
+                    "Subordinate": false,
+                    "ServiceName": "plugin",
+                    "Name": "resourcemanager"
+                },
+                {
+                    "Role": "provider",
+                    "Subordinate": false,
+                    "ServiceName": "yarn-master",
+                    "Name": "resourcemanager"
+                }
+            ],
+            "Key": "plugin:resourcemanager yarn-master:resourcemanager",
+            "Id": 4,
+            "Interface": "mapred"
+        },
+        {
+            "Scope": "global",
+            "Endpoints": [
+                {
+                    "Role": "requirer",
+                    "Subordinate": false,
+                    "ServiceName": "plugin",
+                    "Name": "namenode"
+                },
+                {
+                    "Role": "provider",
+                    "Subordinate": false,
+                    "ServiceName": "hdfs-master",
+                    "Name": "namenode"
+                }
+            ],
+            "Key": "plugin:namenode hdfs-master:namenode",
+            "Id": 5,
+            "Interface": "dfs"
+        },
+        {
+            "Scope": "container",
+            "Endpoints": [
+                {
+                    "Role": "provider",
+                    "Subordinate": false,
+                    "ServiceName": "pig",
+                    "Name": "hadoop-plugin"
+                },
+                {
+                    "Role": "requirer",
+                    "Subordinate": true,
+                    "ServiceName": "plugin",
+                    "Name": "hadoop-plugin"
+                }
+            ],
+            "Key": "plugin:hadoop-plugin pig:hadoop-plugin",
+            "Id": 6,
+            "Interface": "hadoop-plugin"
+        },
+        {
+            "Scope": "global",
+            "Endpoints": [
+                {
+                    "Role": "requirer",
+                    "Subordinate": false,
+                    "ServiceName": "yarn-master",
+                    "Name": "namenode"
+                },
+                {
+                    "Role": "provider",
+                    "Subordinate": false,
+                    "ServiceName": "hdfs-master",
+                    "Name": "namenode"
+                }
+            ],
+            "Key": "yarn-master:namenode hdfs-master:namenode",
+            "Id": 0,
+            "Interface": "dfs"
+        }
+    ]
+}
