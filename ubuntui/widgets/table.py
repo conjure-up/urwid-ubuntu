@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 
-from urwid import (Columns, ListBox, Divider)
+from urwid import (Columns, ListBox)
 from ubuntui.widgets.hr import HR
 
 
