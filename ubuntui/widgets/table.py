@@ -49,7 +49,7 @@ class Table:
         use_divider: use divider for row item
         """
         if use_divider:
-            self._rows.append(HR())
+            self._rows.append(HR(0, 0))
         self._rows.append(item)
 
     def render(self):
