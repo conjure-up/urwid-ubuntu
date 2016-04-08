@@ -18,7 +18,7 @@ class Table:
         headings: List of column text headings
         """
         if not self._is_header_set:
-            self.addRow(Columns(headings))
+            self.addRow(Columns(headings), False)
             self._is_header_set = True
 
     def addColumns(self, row_id, columns, force=False):
