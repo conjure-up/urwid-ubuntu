@@ -8,7 +8,7 @@ Ubuntu styled widgets for urwid.
 from setuptools import setup, find_packages
 
 setup(name='ubuntui',
-      version="0.1.3",
+      version="0.1.4",
       description="Urwid widgets used in Ubuntu console apps",
       long_description=__doc__,
       author="Canonical Solutions Engineering",
