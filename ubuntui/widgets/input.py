@@ -48,8 +48,8 @@ class PasswordEditor(StringEditor):
     """ Password input prompt with masking
     """
 
-    def __init__(self, caption=None, mask="*"):
-        super().__init__(caption, mask=mask)
+    def __init__(self, caption=None, mask="*", **kwargs):
+        super().__init__(caption, mask=mask, **kwargs)
 
 
 class RealnameEditor(StringEditor):
