@@ -1,7 +1,12 @@
 """ Re-usable input widgets
 """
 
-from urwid import (Edit, IntEdit, RadioButton, WidgetWrap, Columns)
+from urwid import (Edit,
+                   IntEdit,
+                   RadioButton,
+                   WidgetWrap,
+                   Pile,
+                   Columns)
 import logging
 import re
 
@@ -126,13 +131,13 @@ class Selector(WidgetWrap):
         self.opts = opts
         self.group = []
         self._add_options()
-        super().__init__(Columns(self._add_options()))
+        super().__init__(self._add_options())
 
     def _add_options(self):
         cols = []
         for item in self.opts:
             cols.append((8, RadioButton(self.group, item)))
-        return cols
+        return Columns(cols)
 
     @property
     def value(self):
@@ -170,3 +175,13 @@ class YesNo(Selector):
     def __init__(self):
         opts = ['Yes', 'No']
         super().__init__(opts)
+
+
+class SelectorHorizontal(Selector):
+    """ This is to use rows instead of columns for selection list
+    """
+    def _add_options(self):
+        rows = []
+        for item in self.opts:
+            rows.append((RadioButton(self.group, item)))
+        return Pile(rows)
