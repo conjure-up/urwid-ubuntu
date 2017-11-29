@@ -11,6 +11,7 @@ import logging
 import re
 
 log = logging.getLogger("widgets.input")
+first_true = Ellipsis  # default value that is distinguishable from None
 
 
 class StringEditor(WidgetWrap):
@@ -124,11 +125,15 @@ class Selector(WidgetWrap):
     """ Radio selection list of options
     """
 
-    def __init__(self, opts):
+    def __init__(self, opts, default=first_true):
         """
         :param list opts: list of options to display
+        :param default: Value of option to be selected by default.  Defaults
+            to the first item in the list.  If ``None``, no item will be
+            selected by default.
         """
         self.opts = opts
+        self.default = default
         self.group = []
         self._add_options()
         super().__init__(self._add_options())
@@ -136,7 +141,11 @@ class Selector(WidgetWrap):
     def _add_options(self):
         cols = []
         for item in self.opts:
-            cols.append((8, RadioButton(self.group, item)))
+            if self.default is first_true:
+                state = 'first True'
+            else:
+                state = item == self.default
+            cols.append((8, RadioButton(self.group, item, state=state)))
         return Columns(cols)
 
     @property
@@ -172,9 +181,14 @@ class YesNo(Selector):
     """ Yes/No selector
     """
 
-    def __init__(self):
+    def __init__(self, default=None):
+        """
+        :param default: Default value, if any.  Can be ``'Yes'``, ``'No'``,
+            or ``None`` (which will select neither by default).  Defaults to
+            ``None``.
+        """
         opts = ['Yes', 'No']
-        super().__init__(opts)
+        super().__init__(opts, default)
 
 
 class SelectorHorizontal(Selector):
