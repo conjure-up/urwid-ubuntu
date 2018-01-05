@@ -179,15 +179,22 @@ class Selector(WidgetWrap):
 
 class YesNo(Selector):
     """ Yes/No selector
+
+    Note: The :prop:`.value` will be either ``True`` or ``False`` rather than
+    ``'Yes'`` or ``'No'``.
     """
 
     def __init__(self, default=None):
         """
-        :param default: Default value, if any.  Can be ``'Yes'``, ``'No'``,
-            or ``None`` (which will select neither by default).  Defaults to
-            ``None``.
+        :param default: Default value, if any.  Can be ``'Yes'``, ``True``,
+            ``'No'``, ``False``, or ``None`` (which will select neither by
+            default).  Defaults to ``None``.
         """
         opts = ['Yes', 'No']
+        if default is True or default == 'True':
+            default = 'Yes'
+        if default is False or default == 'False':
+            default = 'No'
         super().__init__(opts, default)
 
 
